@@ -1,0 +1,21 @@
+.containerTitle{
+    min-width: 320px;
+    max-width: 768px;
+    height: 480px;
+    color: #fff;
+    background-color: #1b6f64;
+    padding-top: 104px;
+    margin: 0 auto;
+}
+
+.title{
+    font-family: "Bad Script", cursive;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 42px;
+    letter-spacing: 1px;
+    color: #fff;
+    min-width: 320px;
+    text-align: left;
+    margin: 0 16px;
+}

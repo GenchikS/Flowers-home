@@ -2,11 +2,11 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.module.css";
 import Layout from "./component/Layout/Layout";
-import HomePages from "./pages/HomePages/HomePages";
 import { lazy, Suspense } from "react";
-import AppBar from "./component/AppBar/AppBar.jsx";
 
-// const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
+const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
+const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
+const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
 
 export default function App() {
   // const [count, setCount] = useState(0)
@@ -14,13 +14,14 @@ export default function App() {
     <div>
       {/* <AppBar/> */}
       <Layout>
-        <HomePages />
         <Suspense fallback={null}>
-        {/* <Routes> */}
-          {/* <Route path="/" element={<HomePages />} /> */}
-          {/* <Route path="*" element={<NotFound />} /> */}
-        {/* </Routes> */}
-      </Suspense>
+          <Routes>
+            <Route path="/" element={<HomePages />} />
+            <Route path="flowers" element={<FlowersPages />} />
+            <Route path="contacts" element={<ContactsPages />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+        </Suspense>
       </Layout>
     </div>
   );
