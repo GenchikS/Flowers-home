@@ -1,0 +1,9 @@
+.containerAll{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style-type: none;
+    border-bottom: 2px solid #2276d6;
+    padding: 16px 12px;
+    margin: 0;
+}
