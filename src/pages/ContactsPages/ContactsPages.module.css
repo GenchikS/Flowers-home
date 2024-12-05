@@ -1,4 +1,11 @@
+h1, p{
+    margin: 0;
+}
+
+
 .containerTitle{
+    display: flex;
+    flex-direction: column;
     min-width: 320px;
     max-width: 768px;
     height: 480px;
@@ -17,5 +24,45 @@
     color: #fff;
     min-width: 320px;
     text-align: left;
-    margin: 0 16px;
+    margin-left: 32px;
+}
+
+.text{
+    font-family: "Bad Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    min-width: 320px;
+    text-align: left;
+    margin-left: 32px;
+    /* text-decoration: line-through; */
+    /* border: 2px solid #fff; */
+}
+
+.textCity{
+    font-family: "Bad Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 24px;
+    letter-spacing: 1px;
+    color: #fff;
+    min-width: 320px;
+    text-align: left;
+    margin-left: 32px;
+    margin-top: 24px;
+}
+
+.textNext{
+    font-family: "Bad Script", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #fff;
+    min-width: 320px;
+    text-align: left;
+    margin-left: 32px;
+    margin-top: 8px;
 }

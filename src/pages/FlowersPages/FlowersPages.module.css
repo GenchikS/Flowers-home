@@ -1,14 +1,19 @@
 .containerTitle{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     min-width: 320px;
     max-width: 768px;
-    height: 480px;
+    height: auto;
     color: #fff;
     background-color: #1b6f64;
-    padding-top: 104px;
     margin: 0 auto;
+    padding-top: 8px;
+    justify-content: center;
+    gap: 8px;
 }
 
-.title{
+/* .title{
     font-family: "Bad Script", cursive;
     font-weight: 700;
     font-style: normal;
@@ -18,4 +23,10 @@
     min-width: 320px;
     text-align: left;
     margin: 0 16px;
+} */
+
+img{
+    width: 220px;
+    height: 320px;
+    margin: 0 auto;
 }
