@@ -26,7 +26,7 @@ import photo11 from "../../img/11.jpg";
 
 
 export default function FlowersPages() {
-  return (
+return (
     <div className={css.containerTitle}>
       {/* <h1 className={css.title}>Flowers</h1> */}
       <img src={photo1} alt="" />
