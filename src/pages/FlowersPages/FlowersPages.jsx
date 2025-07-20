@@ -10,22 +10,18 @@ import photo8 from "../../img/8.jpg";
 import photo9 from "../../img/9.jpg";
 import photo10 from "../../img/10.jpg";
 import photo11 from "../../img/11.jpg";
-// import photo12 from "../../img/1.jpg";
-// import photo13 from "../../img/1.jpg";
-// import photo14 from "../../img/1.jpg";
-// import photo15 from "../../img/1.jpg";
-// import photo16 from "../../img/1.jpg";
-// import photo17 from "../../img/1.jpg";
-// import photo18 from "../../img/1.jpg";
-// import photo19 from "../../img/1.jpg";
-// import photo20 from "../../img/1.jpg";
-// import photo21 from "../../img/1.jpg";
-// import photo22 from "../../img/1.jpg";
-// import photo23 from "../../img/1.jpg";
-// import photo24 from "../../img/1.jpg";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchFlowers } from "../../redux/flowers/operations.js";
 
 
 export default function FlowersPages() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+     dispatch(fetchFlowers());
+  }, [dispatch]);
+  
 return (
     <div className={css.containerTitle}>
       {/* <h1 className={css.title}>Flowers</h1> */}
