@@ -2,16 +2,16 @@ import { createSlice } from "@reduxjs/toolkit";
 import { fetchFlowers } from "./operations.js";
 
 const initialState = {
-  contacts: {
+  flowers: {
     items: [],
     loading: false,
     error: null,
   }
 };
 
-export const selectContacts = (state) => state.contacts.items;
-export const selectLoading = (state) => state.contacts.loading;
-export const selectError = (state) => state.contacts.error;
+export const selectFlowers = (state) => state.flowers.items;
+export const selectLoading = (state) => state.flowers.loading;
+export const selectError = (state) => state.flowers.error;
 
 
 const flowersSlice = createSlice({
