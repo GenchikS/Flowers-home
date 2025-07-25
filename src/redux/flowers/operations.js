@@ -5,8 +5,8 @@ axios.defaults.baseURL = "https://flowers-home-bd.onrender.com";
 
 export const fetchFlowers = createAsyncThunk("flowers/fetchAll", async (_, thunkAPI) => {
     try {
-        const response = await axios.get(`/flowers`);
-        // console.log(response.data);
+        const response = await axios.get(`/`);
+        console.log(response.data);
         return response.data;
     } catch (error) {
         thunkAPI.rejectWithValue(error.message);
