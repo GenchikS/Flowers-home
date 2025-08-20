@@ -8,7 +8,7 @@ export default function FlowersPages() {
       <p className={css.textNext}>вул. Івана Тихого буд. 58,</p>
       {/* <p className={css.textNext}>Пазій Лариса</p> */}
       <p className={css.textNext}>т. +380989979464</p>
-      <p className={css.textNext}>Відправляємо Новою Поштою</p>
+      <p className={css.textNext}>Відправляємо: Новою Поштою</p>
     </div>
   );
 }
