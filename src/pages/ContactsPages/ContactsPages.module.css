@@ -54,15 +54,15 @@ h1, p{
     margin-top: 24px;
 }
 
-.textNext{
+y.textNext{
     font-family: "Bad Script", cursive;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
+    font-size: 24px;
     letter-spacing: 1px;
     color: #fff;
     min-width: 320px;
     text-align: left;
     margin-left: 32px;
-    margin-top: 8px;
+    margin-top: 24px;
 }
