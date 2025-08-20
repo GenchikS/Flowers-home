@@ -1,0 +1,30 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    align-content: flex-start;
+    padding: 8px;
+    border: 2px solid #6d9cd2;
+    background-color: rgba(82, 73, 247, 0.437);
+    border-radius: 8px;
+}
+
+.image{
+    object-fit: cover;
+    border: 3px solid #6d9cd2;
+    border-radius: 8px;
+}
+
+.flower{
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    letter-spacing: 2px;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.text{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+}

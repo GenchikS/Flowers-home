@@ -1,17 +1,28 @@
-// import { useSelector } from "react-redux";
-// import { selectFlowers } from "../../redux/flowers/flowersSlice.js";
+import css from "./ImageCard.module.css"
 
-export default function ImageCard({ flower, color, size, blossom, price }) {
+export default function ImageCard({ flower, color, size, blossom, price, photo }) {
     return (
       <div>
-        <img src="" alt="" />
-        <ul>
+        <img src={photo} alt="Фото хрезантема" className={css.image}></img>
+        <ul className={css.container}>
           <li>
-            <p>{flower}</p>
-            <p>{color}</p>
-            <p>{size} см</p>
-            <p>{blossom}</p>
-            <p>{price} грн.</p>
+            <p className={css.flower}>{flower}</p>
+            <div className={css.text}>
+              <p>Колір: </p>
+              <p>{color}</p>
+            </div>
+            <div className={css.text}>
+              <p>Розмір:</p>
+              <p>{size} см</p>
+            </div>
+            <div className={css.text}>
+              <p>Цвітіння:</p>
+              <p>{blossom}</p>
+            </div>
+            <div className={css.text}>
+              <p>Ціна:</p>
+              <p>{price} грн.</p>
+            </div>
           </li>
         </ul>
       </div>

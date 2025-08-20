@@ -22,7 +22,15 @@ export default function FlowersPages() {
       {flowersItems.length &&
         flowersItems.map((flower) => (
           <li key={flower._id}>
-            <ImageCard flower={ flower.flower} color={flower.color} size={flower.size} price={flower.price} blossom={ flower.blossom} />
+            {/* {console.log(flower.photo)} */}
+            <ImageCard
+              flower={flower.flower}
+              color={flower.color}
+              size={flower.size}
+              price={flower.price}
+              blossom={flower.blossom}
+              photo={flower.photo}
+            />
           </li>
         ))}
     </ul>
