@@ -6,6 +6,7 @@ h1, p{
     display: flex;
     flex-direction: column;
     min-width: 320px;
+    height: 600px;
     background-color: rgba(229, 235, 235, 0.6);;
     padding-top: 46px;
     align-items: center;
