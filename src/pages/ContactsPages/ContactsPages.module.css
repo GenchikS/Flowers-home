@@ -9,60 +9,108 @@ h1, p{
     min-width: 320px;
     max-width: 768px;
     height: 480px;
-    color: #fff;
-    background-color: #1b6f64;
-    padding-top: 104px;
+    background-color: rgba(190, 190, 245, 0.4);
+    padding-top: 60px;
     margin: 0 auto;
 }
 
 .title{
-    font-family: "Bad Script", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 42px;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 34px;
     letter-spacing: 1px;
-    color: #fff;
-    min-width: 320px;
-    text-align: left;
-    margin-left: 32px;
+    color: black;
+    margin: 0 auto;
+    margin-bottom: 22px;
 }
 
-.text{
-    font-family: "Bad Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    letter-spacing: 1px;
-    color: #fff;
+.textContoiner{
+    margin: 0 auto;
+}
+
+.textRegion{
     min-width: 320px;
-    text-align: left;
-    margin-left: 32px;
-    /* text-decoration: line-through; */
-    /* border: 2px solid #fff; */
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: black;
+    margin-bottom: 4px;
 }
 
 .textCity{
-    font-family: "Bad Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 24px;
-    letter-spacing: 1px;
-    color: #fff;
     min-width: 320px;
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: black;
     text-align: left;
-    margin-left: 32px;
-    margin-top: 24px;
+    margin: 0 auto;
+    margin-bottom: 4px;
 }
 
-.textNext{
+.textStreet{
     font-family: "Bad Script", cursive;
-    font-weight: 400;
     font-style: normal;
-    font-size: 24px;
+    font-size: 22px;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     min-width: 320px;
     text-align: left;
-    margin-left: 32px;
-    margin-top: 24px;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.textTel{
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: black;
+    min-width: 320px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+.textNp{
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    font-size: 22px;
+    letter-spacing: 1px;
+    color: black;
+    min-width: 320px;
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 4px;
+}
+
+@media screen and (min-width: 768px){
+ 
+    .title{
+    font-weight: 600;
+    font-size: 38px;
+    margin-bottom: 38px;
+}
+
+.textRegion, .textCity, .textStreet, .textTel, .textNp{
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+}
+
+@media screen and (min-width: 1440px){
+ 
+    .title{
+    font-weight: 600;
+    font-size: 46px;
+    margin-bottom: 46px;
+}
+
+.textRegion, .textCity, .textStreet, .textTel, .textNp{
+    font-size: 32px;
+    margin-bottom: 12px;
+}
 }
