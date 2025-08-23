@@ -16,7 +16,6 @@ export default function FlowersPages() {
   const isLoader = useSelector(selectLoading);
   
   const flowersItems = flowers !== undefined && flowers.data;
-    
   //  console.log("isLoader ", isLoader);
   
   useEffect(() => {

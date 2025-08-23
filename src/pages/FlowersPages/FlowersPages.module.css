@@ -1,14 +1,16 @@
 .containerTitle{
+    min-width: 320px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 320px;
     color: #fff;
-    background-color: rgba(190, 190, 245, 0.1);
+    background-color: rgba(190, 190, 245, 0.6);
     justify-content: center;
-    gap: 8px;
     list-style-type: none;
+    gap: 12px;
+    margin: 0;
     padding: 0;
+    padding-top: 12px;
 }
 
 img{
@@ -19,7 +21,8 @@ img{
 
 @media screen and (min-width: 768px) {
 .containerTitle{
-gap: 14px;
+gap: 16px;
+padding-top: 16px
 }
 
 img{
@@ -30,7 +33,8 @@ img{
 
 @media screen and (min-width: 1440px) {
 .containerTitle{
-gap: 18px;
+gap: 22px;
+padding-top: 22px
 }
 
 img{

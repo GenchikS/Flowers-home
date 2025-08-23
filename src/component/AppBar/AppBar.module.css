@@ -1,25 +1,2 @@
-.containerAll{
-    display: flex;
-    flex-direction: column;
-    min-width: 320px;
-    height: auto;
-    color: #fff;
-    background-color: #09981ccb;
-    padding: 0;
-}
-
-@media screen and (min-width: 768px) {
-    .containerAll{
-        min-width: 768px;
-        /* max-width: 1439px; */
-        margin: 0;
-    }
-}
-
-@media screen and (width: 1440px) {
-    .containerAll{
-        width: 1440px;
-    }
-}
 
 

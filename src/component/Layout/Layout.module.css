@@ -2,8 +2,7 @@
     min-width: 320px;
     height: auto;
     color: #fff;
-    background-color: #1b6f64;
-    margin: 0 auto;
+    background-color: #09981ccb;
 }
 
 @media screen and (min-width: 768px){
@@ -12,8 +11,8 @@
     }
 }
 
-@media screen and (width: 1440px){
+@media screen and (min-width: 1440px){
     .container{
-        width: 1440px;
+        max-width: 1440px;
     }
 }

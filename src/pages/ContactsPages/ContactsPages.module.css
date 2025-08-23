@@ -138,7 +138,7 @@ h1, p{
 
 @media screen and (min-width: 1440px){
 .containerTitle{
-    width:1440px;
+    max-width:1440px;
 }
 .title{
     font-weight: 600;
