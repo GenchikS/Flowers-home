@@ -3,15 +3,14 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 320px;
-    max-width: 728px;
-    height: auto;
+    max-width: 752px;
     color: #fff;
-    background-color: #1b6f64;
+    background-color: rgba(190, 190, 245, 0.1);
     margin: 0 auto;
-    padding-top: 8px;
     justify-content: center;
-    gap: 8px;
+    gap: 10px;
     list-style-type: none;
+    padding: 8px;
 }
 
 img{

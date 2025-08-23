@@ -15,7 +15,7 @@ export default function Navigation() {
     <ul className={css.containerAll}>
       <li>
         <NavLink to="/" className={navi}>
-          Home
+          Flowers Home
         </NavLink>
       </li>
       <li>

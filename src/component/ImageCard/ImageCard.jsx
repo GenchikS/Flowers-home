@@ -2,9 +2,9 @@ import css from "./ImageCard.module.css"
 
 export default function ImageCard({ flower, color, size, blossom, price, photo }) {
     return (
-      <div>
+      <div className={css.container}>
         <img src={photo} alt="Фото хрезантема" className={css.image}></img>
-        <ul className={css.container}>
+        <ul className={css.list}>
           <li>
             <p className={css.flower}>{flower}</p>
             <div className={css.text}>
@@ -19,7 +19,7 @@ export default function ImageCard({ flower, color, size, blossom, price, photo }
               <p>Цвітіння:</p>
               <p>{blossom}</p>
             </div>
-            <div className={css.text}>
+            <div className={css.textPrice}>
               <p>Ціна:</p>
               <p>{price} грн.</p>
             </div>

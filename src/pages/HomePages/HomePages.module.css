@@ -1,34 +1,41 @@
-.containerTitle{
+.container{
     min-width: 320px;
     max-width: 768px;
     height: 480px;
-    color: #fff;
-    background-color: #1b6f64;
-    padding-top: 104px;
+    padding-top: 16px;
     margin: 0 auto;
+    background-image: url("/src/img/background-2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.85;
+}
+
+.containerTitle{
+    padding: 8px;
+    background-color: rgba(229, 235, 235, 0.6);
 }
 
 .title{
-    font-family: "Bad Script", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: 42px;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 32px;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     min-width: 320px;
     text-align: left;
     margin: 0 16px;
-    margin-bottom: 32px;
+    margin-bottom: 18px;
 }
 
 .text{
     display: flex;
-    font-family: "Bad Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 22px;
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 18px;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     min-width: 320px;
     text-align: left;
     margin: 0 16px;
