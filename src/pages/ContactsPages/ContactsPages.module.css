@@ -2,12 +2,10 @@ h1, p{
     margin: 0;
 }
 
-
 .containerTitle{
     display: flex;
     flex-direction: column;
     min-width: 320px;
-    max-width: 768px;
     height: 480px;
     background-color: rgba(229, 235, 235, 0.6);;
     padding-top: 60px;
@@ -88,7 +86,6 @@ h1, p{
 }
 
 @media screen and (min-width: 768px){
- 
     .title{
     font-weight: 600;
     font-size: 38px;

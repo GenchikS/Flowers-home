@@ -1,6 +1,3 @@
-// import Home from "../Home/Home.jsx";
-// import Flowers from "../Flowers/Flowers.jsx";
-// import Contacts from "../Contacts/Contacts.jsx";
 import css from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";

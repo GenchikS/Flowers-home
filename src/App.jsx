@@ -2,9 +2,10 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.module.css";
 import Layout from "./component/Layout/Layout";
-import { lazy, Suspense, useEffect } from "react";
-import { useDispatch } from "react-redux";
-import { fetchFlowers } from "./redux/flowers/operations.js";
+import { lazy, Suspense } from "react";
+// import AppBar from "./component/AppBar/AppBar.jsx";
+// import { useDispatch } from "react-redux";
+// import { fetchFlowers } from "./redux/flowers/operations.js";
 // import axios from "axios";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));

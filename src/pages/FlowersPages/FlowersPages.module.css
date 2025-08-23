@@ -3,14 +3,11 @@
     flex-direction: row;
     flex-wrap: wrap;
     min-width: 320px;
-    /* max-width: 752px; */
     color: #fff;
     background-color: rgba(190, 190, 245, 0.1);
-    margin: 0 auto;
     justify-content: center;
     gap: 8px;
     list-style-type: none;
-    /* padding: 8px; */
     padding: 0;
 }
 
@@ -18,4 +15,26 @@ img{
     width: 150px;
     height: 80px;
     margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+.containerTitle{
+gap: 14px;
+}
+
+img{
+    width: 280px;
+    height:180px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.containerTitle{
+gap: 18px;
+}
+
+img{
+    width: 320px;
+    height:220px;
+}
 }
