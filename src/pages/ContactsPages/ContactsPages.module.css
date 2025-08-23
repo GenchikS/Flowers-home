@@ -136,11 +136,12 @@ h1, p{
 }
 
 @media screen and (min-width: 1440px){
-
+.containerTitle{
+    width:1440px;
+}
 .title{
     font-weight: 600;
     font-size: 46px;
-    /* margin-bottom: 36px; */
 }
 
 .textRegion, .textCity, .textStreet, .textTel, .textNp{
