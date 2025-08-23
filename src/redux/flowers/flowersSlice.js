@@ -4,15 +4,14 @@ import { fetchFlowers } from "./operations.js";
 const initialState = {
   flowers: {
     items: [],
-    loading: false,
+    isLoading: false,
     error: null,
   }
 };
 
 export const selectFlowers = (state) => state.flowers.items;
-export const selectLoading = (state) => state.flowers.loading;
+export const selectLoading = (state) => state.flowers.isLoading;
 export const selectError = (state) => state.flowers.error;
-
 
 const flowersSlice = createSlice({
     name: "flowers",
