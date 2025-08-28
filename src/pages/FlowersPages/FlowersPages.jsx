@@ -8,39 +8,47 @@ import {
   selectLoading,
 } from "../../redux/flowers/flowersSlice.js";
 import Loader from "../../component/Loader/Loader.jsx";
+import Filters from "../../component/Filter/Filter.jsx";
+import Paginations from "../../component/Paginations/Paginations.jsx";
 
 
 export default function FlowersPages() {
   const dispatch = useDispatch();
   const flowers = useSelector(selectFlowers);
   const isLoader = useSelector(selectLoading);
-  
+
   const flowersItems = flowers !== undefined && flowers.data;
-  //  console.log("isLoader ", isLoader);
-  
+   console.log("flowers ", flowers);
+
   useEffect(() => {
     dispatch(fetchFlowers());
   }, [dispatch]);
 
-  return isLoader ? <Loader /> : 
+  return isLoader ? (
+    <Loader />
+  ) : (
+    <div>
+      <Filters />
+      <Paginations />
       <ul className={css.containerTitle}>
-    {flowersItems.length &&
-      flowersItems.map((flower) => (
-        <li key={flower._id}>
-          {/* {console.log(flower.photo)} */}
-          <ImageCard
-            flower={flower.flower}
-            color={flower.color}
-            size={flower.size}
-            price={flower.price}
-            blossom={flower.blossom}
-            photo={flower.photo}
-          />
-        </li>
-      ))
-    }
-  </ul>
-  };
+        {flowersItems.length &&
+          flowersItems.map((flower) => (
+            <li key={flower._id}>
+              {/* {console.log(flower.photo)} */}
+              <ImageCard
+                flower={flower.flower}
+                color={flower.color}
+                size={flower.size}
+                price={flower.price}
+                blossom={flower.blossom}
+                photo={flower.photo}
+              />
+            </li>
+          ))}
+      </ul>
+    </div>
+  );
+};
 
 
 

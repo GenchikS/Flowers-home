@@ -6,12 +6,14 @@ const initialState = {
     items: [],
     isLoading: false,
     error: null,
+    modalPhoto: false,
   }
 };
 
 export const selectFlowers = (state) => state.flowers.items;
 export const selectLoading = (state) => state.flowers.isLoading;
 export const selectError = (state) => state.flowers.error;
+export const selectModalPhoto = (state) => state.flowers.modalPhoto;
 
 const flowersSlice = createSlice({
     name: "flowers",
@@ -22,9 +24,10 @@ const flowersSlice = createSlice({
                 state.isLoading = true;
             })
             .addCase(fetchFlowers.fulfilled, (state, action) => {
-                state.isLoading = false,
-                state.error = null,
-                state.items = action.payload
+                (state.isLoading = false),
+                  (state.error = null),
+                  (state.items = action.payload),
+                  (state.modalPhoto = false);
             })
             .addCase(fetchFlowers.rejected, (state, action) => {
                 state.isLoading = false,
