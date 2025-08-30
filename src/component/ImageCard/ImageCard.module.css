@@ -2,6 +2,8 @@
     width: 100%;
     border: 3px solid #6d9cd2;
     border-radius: 8px;
+    /* + */
+    scroll-snap-align: start;
 }
 
 .list{
@@ -9,7 +11,7 @@
     flex-direction: column;
     list-style-type: none;
     padding: 10px;
-    background-color: rgba(229, 235, 235, 0.6);;
+    background-color: rgba(229, 235, 235, 0.6);
 }
 
 .image{

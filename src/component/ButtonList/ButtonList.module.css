@@ -1,0 +1,36 @@
+.buttonList{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Bad Script", cursive;
+    letter-spacing: 1.2px;
+    /* font-weight: 400; */
+    font-size: 18px;
+    color: #fff;
+    /* color: #111; */
+    height: 30px;
+    width: 120px;
+    border: 3px solid #6d9cd2;
+    border-radius: 20px;
+    background-color: #09981ccb;
+    /* background-color: rgba(229, 235, 235, 0.6); */
+    /* opacity: 0.5; */
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 768px) {
+.buttonList{
+    height: 40px;
+    width: 160px;
+    font-size: 24px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+.buttonList{
+    height: 50px;
+    width: 200px;
+    font-size: 32px;
+}
+}

@@ -1,0 +1,8 @@
+.listPagnations{
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0 auto;
+    justify-content: center;
+    background-color: rgba(190, 190, 245, 0.6);
+    padding: 30px 8px;
+}

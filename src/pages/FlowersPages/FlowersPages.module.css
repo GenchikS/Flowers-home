@@ -13,21 +13,64 @@
     padding-top: 12px;
 }
 
-img{
-    width: 150px;
-    height: 80px;
-    margin: 0 auto;
-}
+
+/* горизонтальний скрол в css */
+/* + */
+/* .containerTitle{
+    min-width: 320px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(190, 190, 245, 0.6);
+    list-style-type: none;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+    justify-content: left;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    anchor-name: --containerTitle;
+    scroll-snap-type: x mandatory;
+} */
+
+/* + */
+/* .containerTitle::-webkit-scrollbar{
+    display: none;
+} */
+/* + */
+/* .containerTitle::scroll-button(left), .containerTitle::scroll-button(right){
+    content: '\2190';
+    border: none;
+    background-color: green;
+    font-size: 22px;
+    color: #fff;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: fixed;
+    position-anchor: --containerTitle;
+    position-area: left center;
+    translate: 100%;
+} */
+/* + */
+/* .containerTitle::scroll-button(right){
+    content: '\2192';
+    position-area: right center;
+    translate: -100%;
+} */
+
+/* + */
+/* .containerTitle::scroll-button(left):disabled, .containerTitle::scroll-button(right):disabled{
+    opacity: 0.5;
+    cursor: auto;
+} */
+
 
 @media screen and (min-width: 768px) {
 .containerTitle{
 gap: 16px;
 padding-top: 16px
-}
-
-img{
-    width: 280px;
-    height:180px;
 }
 }
 
@@ -35,10 +78,5 @@ img{
 .containerTitle{
 gap: 22px;
 padding-top: 22px
-}
-
-img{
-    width: 320px;
-    height:220px;
 }
 }
