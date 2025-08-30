@@ -5,11 +5,9 @@ import { fetchFlowers } from "../../redux/flowers/operations.js";
 import ImageCard from "../../component/ImageCard/ImageCard.jsx";
 import {
   selectFlowers,
-  selectLoading,
-  // selectPages,
-} from "../../redux/flowers/flowersSlice.js";
+  selectLoading} from "../../redux/flowers/flowersSlice.js";
 import Loader from "../../component/Loader/Loader.jsx";
-// import Filters from "../../component/Filter/Filter.jsx";
+import Filters from "../../component/Filter/Filter.jsx";
 import Paginations from "../../component/Paginations/Paginations.jsx";
 
 
@@ -42,7 +40,7 @@ export default function FlowersPages() {
     <Loader />
   ) : (
     <div>
-      {/* <Filters /> */}
+      <Filters />
       <ul className={css.containerTitle}>
         {flowersItems.length &&
           flowersItems.map((flower) => (
