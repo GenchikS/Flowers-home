@@ -4,6 +4,7 @@
     letter-spacing: 1px;
     font-size: 18px;
     color: #fff;
+    padding: 8px;
   }
   
 .containerAll{
@@ -16,13 +17,29 @@
     margin: 0;
 }
 
+.link:hover{
+  color: #fff;
+  border: 1px solid #525151;
+  border-radius: 16px;
+  background-color: #6d9cd2;
+  }
+
 @media screen and (min-width: 768px){
+  .containerAll{
+    padding: 24px 12px;
+  }
+
 .link{
   font-size: 24px;
 }
 }
 
 @media screen and (min-width: 1440px){
+
+.containerAll{
+    padding: 28px 12px;
+  }
+
 .link{
   font-size: 32px;
 }

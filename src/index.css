@@ -13,6 +13,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  box-sizing: border-box;
+  height: 100%;
+  font-size: 14px;
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -25,7 +31,7 @@ a:hover {
 body {
   min-width: 320px;
   max-width: 1280px;
-  min-height: 100vh;
+/* min-height: 100vh; */
   margin: 0 auto;
 }
 
