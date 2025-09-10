@@ -7,7 +7,7 @@ import {
   selectFlowers,
   selectLoading} from "../../redux/flowers/flowersSlice.js";
 import Loader from "../../component/Loader/Loader.jsx";
-import Filters from "../../component/Filter/Filter.jsx";
+import Filters from "../../component/Filters/Filters.jsx";
 import Paginations from "../../component/Paginations/Paginations.jsx";
 
 

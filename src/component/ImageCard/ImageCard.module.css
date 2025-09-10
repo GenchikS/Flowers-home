@@ -3,7 +3,7 @@
     border: 3px solid #6d9cd2;
     border-radius: 8px;
     /* + */
-    scroll-snap-align: start;
+    /* scroll-snap-align: start; */
 }
 
 .list{

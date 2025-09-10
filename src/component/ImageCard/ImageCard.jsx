@@ -12,31 +12,36 @@ export default function ImageCard({
   size,
   blossom,
   price,
-  // photo,
+  photo,
   photoWeb,
   availability,
 }) {
   const [onClick, setOnClick] = useState(useSelector(selectModalPhoto));
-  const [url, setUrls] = useState("");
+  // const [url, setUrls] = useState("");
   // const click = useSelector(selectModalPhoto);
 
-      const availabilityAll = availability.includes("так");
-      // console.log("availabilityAll", availabilityAll);
+  const availabilityAll = availability.includes("так");
+  // console.log("availabilityAll", availabilityAll);
 
-  const handleClick = (evn) => {
-    const urlEnd = evn.currentTarget.getAttribute("src");
-    setUrls(urlEnd);
+  const handleClickOn = () => {
+    // const urlEnd = evn.currentTarget.getAttribute("src");
+    // setUrls(urlEnd);
     setOnClick(true);
     // console.log(urlEnd);
 };
 
+  const handleClickOff = () => {
+    setOnClick(!true);
+  };
   // <UserPhgotoModal url={evn.currentTarget.getAttribute("src")}
 
   return onClick ? (
-    <UserPhgotoModal url={url} />
+    <a onClick={handleClickOff}>
+      <UserPhgotoModal url={photo} />
+    </a>
   ) : (
     <div className={css.gallery}>
-      <a src={photoWeb} onClick={handleClick}>
+      <a src={photoWeb} onClick={handleClickOn}>
         <img className={css.image} src={photoWeb} alt="фото" title="фото" />
         <ul className={css.list}>
           <li>
