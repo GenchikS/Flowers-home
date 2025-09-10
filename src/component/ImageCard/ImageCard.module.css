@@ -50,10 +50,9 @@
 }
 
 .textAvailability{
-
     font-weight: 700;
     color: #068617cf;;
-    font-size: 16px;  
+    font-size: 14px;  
 }
 
 .textAvailabilityNot{
@@ -70,28 +69,28 @@
     height: 160px;
 }
     .flower{
-        font-size: 24px;
+    font-size: 24px;
     }
 
-    .text, .textPrice{
+    .text, .textPrice, .textAvailability, .textAvailabilityNot{
     font-size: 16px;
     }
 
-    .textPrice{
-        font-weight: 700;
+    .textPrice, .textAvailability, .textAvailabilityNot{
+    font-weight: 700;
     }
 }
 
 @media screen and (min-width: 1440px) {
     .flower{
-        font-size: 28px;
+    font-size: 28px;
     }
 
-    .text, .textPrice{
+    .text, .textPrice, .textAvailability, .textAvailabilityNot{
     font-size: 18px;
     }
 
-    .textPrice{
-        font-weight: 800;
+    .textPrice, .textAvailability, .textAvailabilityNot{
+    font-weight: 700;
     }
 }
