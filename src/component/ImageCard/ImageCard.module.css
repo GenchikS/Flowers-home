@@ -16,9 +16,10 @@
 
 .image{
     display: block;
-    object-fit: cover;
+    /* object-fit: cover; */
     width: 148px;
     height: 120px;
+    margin: 0 auto;
 }
 
 .flower{
@@ -30,19 +31,35 @@
     color: black;
 }
 
-.text{
+.containerText{
     display: flex;
     justify-content: space-between;
+}
+
+.text{
     color: black;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .textPrice{
-    display: flex;
-    justify-content: space-between;
-    font-weight: 500;
+    /* display: flex;
+    justify-content: space-between; */
+    font-weight: 700;
     color: #068617cf;;
-    font-size: 12px;  
+    font-size: 16px;  
+}
+
+.textAvailability{
+
+    font-weight: 700;
+    color: #068617cf;;
+    font-size: 16px;  
+}
+
+.textAvailabilityNot{
+    font-weight: 500;
+    color: red;;
+    font-size: 16px;  
 }
 
 @media screen and (min-width: 768px) {

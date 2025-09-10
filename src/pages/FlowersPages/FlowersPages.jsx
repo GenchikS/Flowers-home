@@ -21,19 +21,19 @@ export default function FlowersPages() {
   const flowersItems = flowers !== undefined && flowers.data;
 
   const handleClick = ({ title }) => {
-    if (title === "наступна") {
+    if (title === page+1) {
       setPage(page + 1);
-    } else if (title === "попередня") {
+    } else if (title === page-1) {
       setPage(page - 1);
     }
   };
   
   // console.log("page", page);
-   console.log("flowers ", flowers);
+  //  console.log("flowers ", flowers);
 
   useEffect(() => {
     dispatch(fetchFlowers(page));
-    console.log("page", page);
+    // console.log("page", page);
   }, [dispatch, page]);
 
   return isLoader ? (
@@ -53,12 +53,14 @@ export default function FlowersPages() {
                 price={flower.price}
                 blossom={flower.blossom}
                 photo={flower.photo}
+                photoWeb={flower.photoWeb}
+                availability={flower.availability}
               />
             </li>
           ))}
       </ul>
       {flowersItems.length && (
-          <Paginations page={ page} onUpdate={handleClick}/>
+        <Paginations page={page} onUpdate={handleClick} />
       )}
     </div>
   );

@@ -6,12 +6,12 @@ import ButtonList from "../ButtonList/ButtonList.jsx";
 
 export default function Paginations({ page, onUpdate }) {
     const flowers = useSelector(selectFlowers);
-    console.log("total", flowers.totalPages);
+    // console.log("total", flowers.totalPages);
   return (
     <div className={css.listPagnations}>
-      {page > 1 && <ButtonList onUpdate={onUpdate} title={"попередня"} />}
+      {page > 1 && <ButtonList onUpdate={onUpdate} title={page-1} />}
       <NumberListPageFlowers />
-      {page < flowers.totalPages && <ButtonList onUpdate={onUpdate} title={"наступна"} />}
+      {page < flowers.totalPages && <ButtonList onUpdate={onUpdate} title={page+1} />}
     </div>
   );
 }
