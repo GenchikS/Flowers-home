@@ -8,9 +8,16 @@ axios.defaults.baseURL = "https://flowers-home-bd.onrender.com";
 
 export const fetchFlowers = createAsyncThunk(
   "flowers/fetchAll",
-  async (page, perPage, color, thunkAPI) => {
+  async ( {page, perPage, color}, thunkAPI) => {
+    // console.log("color2", color);
+    // console.log("page2", page);
+    // console.log("perPage2", perPage);
+
+
     try {
-      const response = await axios.get(`/?page=${page}&perPage=${perPage}&&color=${color}`);
+      const response = await axios.get(
+        `/?page=${page}&color=${color}`
+      );
       // console.log("response", response.data);
       return response.data.data;
     } catch (error) {

@@ -6,7 +6,7 @@ import ButtonList from "../ButtonList/ButtonList.jsx";
 
 export default function Paginations({ page, onUpdate }) {
     const flowers = useSelector(selectFlowers);
-    // console.log("total", flowers.totalPages);
+    // console.log("page3", page);
   return (
     <div className={css.listPagnations}>
       {page > 1 && <ButtonList onUpdate={onUpdate} title={page-1} />}

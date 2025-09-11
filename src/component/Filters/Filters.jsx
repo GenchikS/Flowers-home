@@ -10,12 +10,15 @@ export default function Filters({ value, onSelect }) {
         <select
           id={selectId}
           value={value.color}
-          onChange={(evt) => onSelect.setColor(evt.target.value)}
+          onChange={(evt) => { if (evt.target.value === value.color) {onSelect.setColor(evt.target.value)} else {onSelect.setColor(evt.target.value); onSelect.setPage(1)} }}
         >
           <option value="всі">всі</option>
           <option value="білий">білий</option>
           <option value="оранжевий">оранжевий</option>
-          <option value="фіолетови">фіолетови</option>
+          <option value="фіолетовий">фіолетовий</option>
+          <option value="зелений">зелений</option>
+          <option value="жовтий">жовтий</option>
+          <option value="червоний">червоний</option>
         </select>
       </label>
       <label htmlFor={selectId}>
@@ -37,3 +40,5 @@ export default function Filters({ value, onSelect }) {
     </div>
   );
 }
+// onSelect.setColor(evt.target.value)
+// { evt.color === evt.target.value ? onSelect.setColor(evt.target.value)}

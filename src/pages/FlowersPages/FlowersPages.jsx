@@ -17,15 +17,15 @@ export default function FlowersPages() {
   const isLoader = useSelector(selectLoading);
   
   const [page, setPage] = useState(1);
-  const [perPage, setPerPage] = useState(6);
-  const [color, setColor] = useState("всі");
+  const [perPage, setPerPage] = useState("6");
+  const [color, setColor] = useState(`всі`);
 
   const flowersItems = flowers !== undefined && flowers.data;
 
   const handleClick = ({ title }) => {
-    if (title === page+1) {
+    if (title === page + 1) {
       setPage(page + 1);
-    } else if (title === page-1) {
+    } else if (title === page - 1) {
       setPage(page - 1);
     }
   };
@@ -34,9 +34,12 @@ export default function FlowersPages() {
   //  console.log("flowers ", flowers);
 
   useEffect(() => {
-    dispatch(fetchFlowers(page, perPage, color));
-    // console.log("page", page);
-  }, [dispatch, page, perPage, color]);
+    // console.log("page1", page);
+    // console.log("perPage1", perPage);
+    // console.log("color1", color);
+    dispatch(fetchFlowers({ page, perPage, color }))
+  },[dispatch, page, perPage, color]
+  );
 
   return isLoader ? (
     <Loader />
@@ -44,7 +47,7 @@ export default function FlowersPages() {
     <div>
       <Filters
         value={{ color, perPage }}
-        onSelect={{setColor, setPerPage}}
+        onSelect={{setColor, setPerPage, setPage}}
       />
       <ul className={css.containerTitle}>
         {flowersItems.length &&
