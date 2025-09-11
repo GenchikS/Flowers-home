@@ -1,5 +1,6 @@
 .gallery{
-    width: 100%;
+    display: flex;
+    /* width: 100%; */
     border: 2px solid #6d9cd2;
     border-radius: 8px;
     /* + */
@@ -16,8 +17,8 @@
 
 .image{
     display: block;
-    /* object-fit: contain; */
     object-fit: cover;
+    width: 134px;
     margin: 0 auto;
     border: 1px solid #6d9cd2;
     border-radius: 8px;
