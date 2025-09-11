@@ -16,7 +16,7 @@
 
 .image{
     display: block;
-    /* object-fit: cover; */
+    object-fit: cover;
     width: 148px;
     height: 120px;
     margin: 0 auto;
@@ -58,7 +58,7 @@
 .textAvailabilityNot{
     font-weight: 500;
     color: red;;
-    font-size: 16px;  
+    font-size: 14px;  
 }
 
 @media screen and (min-width: 768px) {
