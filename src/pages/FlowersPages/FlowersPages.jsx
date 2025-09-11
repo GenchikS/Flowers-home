@@ -30,10 +30,7 @@ export default function FlowersPages() {
     }
   };
   
-  // console.log("page", page);
-  //  console.log("flowers ", flowers);
-
-  useEffect(() => {
+    useEffect(() => {
     // console.log("page1", page);
     // console.log("perPage1", perPage);
     // console.log("color1", color);

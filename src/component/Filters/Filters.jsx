@@ -40,5 +40,3 @@ export default function Filters({ value, onSelect }) {
     </div>
   );
 }
-// onSelect.setColor(evt.target.value)
-// { evt.color === evt.target.value ? onSelect.setColor(evt.target.value)}
