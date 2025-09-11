@@ -3,7 +3,6 @@ import css from "./ContactsPages.module.css";
 export default function FlowersPages() {
   return (
     <div className={css.containerTitle}>
-      {/* <div className={css.textContoiner}> */}
       <h2 className={css.title}>Контакти:</h2>
       <p className={css.textRegion}>Харківська обл., Ізюмський р-н.,</p>
       <p className={css.textCity}>сел. Савинці,</p>

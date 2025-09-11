@@ -1,6 +1,5 @@
-// import { useState } from 'react'
 import { Route, Routes } from "react-router-dom";
-import "./App.module.css";
+import css from "./App.module.css";
 import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 
@@ -15,7 +14,7 @@ const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
 
 export default function App() {
  return (
-    <div>
+    <div className={css.container}>
       <Layout>
         <Suspense fallback={null}>
           <Routes>
