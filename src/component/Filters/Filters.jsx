@@ -30,6 +30,27 @@ export default function Filters({ value, onSelect }) {
           <option value="червоний">червоний</option>
         </select>
       </label>
+      <label htmlFor={selectId} className={css.labelSize}>
+        Обрати розмір квітів
+        <select
+          id={selectId}
+          value={value.color}
+          onChange={(evt) => {
+            if (evt.target.value === value.color) {
+              onSelect.setColor(evt.target.value);
+            } else {
+              onSelect.setColor(evt.target.value);
+              onSelect.setPage(1);
+            }
+          }}
+          className={css.selectSize}
+        >
+          <option value="всі">всі</option>
+          <option value="30">30 см</option>
+          <option value="50">50 см</option>
+          <option value="80">80 см</option>
+        </select>
+      </label>
       <label htmlFor={selectId} className={css.labelPerPage}>
         Кількість фото на сторінці
         <select
@@ -44,9 +65,6 @@ export default function Filters({ value, onSelect }) {
           <option value="10">10</option>
         </select>
       </label>
-      {/* <button type="button" disabled={!hasAccepted}>
-          фільтр
-        </button> */}
     </div>
   );
 }

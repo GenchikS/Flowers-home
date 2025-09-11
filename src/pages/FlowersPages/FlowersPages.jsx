@@ -41,34 +41,37 @@ export default function FlowersPages() {
   return isLoader ? (
     <Loader />
   ) : (
-    <div>
+    <div className={css.containerFlowersPage}>
       <Filters
         value={{ color, perPage }}
-        onSelect={{setColor, setPerPage, setPage}}
+        onSelect={{ setColor, setPerPage, setPage }}
       />
-      <ul className={css.containerTitle}>
-        {flowersItems.length &&
-          flowersItems
-            // .filter((flower) => flower.color === color)
-            .map((flower) => (
-              <li key={flower._id}>
-                {/* {console.log(flower.photo)} */}
-                <ImageCard
-                  flower={flower.flower}
-                  color={flower.color}
-                  size={flower.size}
-                  price={flower.price}
-                  blossom={flower.blossom}
-                  photo={flower.photo}
-                  photoWeb={flower.photoWeb}
-                  availability={flower.availability}
-                />
-              </li>
-            ))}
-      </ul>
-      {flowersItems.length && (
-        <Paginations page={page} onUpdate={handleClick} />
-      )}
+      <div className={css.containerCartPaginations}>
+        <ul className={css.containerTitle}>
+          {flowersItems.length &&
+            flowersItems
+              // .filter((flower) => flower.color === color)
+              .map((flower) => (
+                <li key={flower._id}>
+                  {/* {console.log(flower.photo)} */}
+                  <ImageCard
+                    flower={flower.flower}
+                    color={flower.color}
+                    size={flower.size}
+                    price={flower.price}
+                    blossom={flower.blossom}
+                    photo={flower.photo}
+                    photoWeb={flower.photoWeb}
+                    availability={flower.availability}
+                  />
+                </li>
+              ))}
+        </ul>
+
+        {flowersItems.length && (
+          <Paginations page={page} onUpdate={handleClick} />
+        )}
+      </div>
     </div>
   );
 };
