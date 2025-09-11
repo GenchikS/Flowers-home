@@ -4,6 +4,12 @@
     height: 800px;
 }
 
+/* .containerCartPaginations{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+} */
+
 .containerTitle{
     min-width: 320px;
     height: 100%;
@@ -20,6 +26,7 @@
     padding: 0;
     padding-top: 12px;
 }
+
 
 
 /* горизонтальний скрол в css */
