@@ -5,13 +5,21 @@ export default function Filters({ value, onSelect }) {
   const selectId = useId();
   // console.log("value", value);
   return (
-    <div className={ css.container}>
-      <label htmlFor={selectId}>
-        Обрати колір
+    <div className={css.container}>
+      <label htmlFor={selectId} className={css.labelColor}>
+        Обрати колір квітів
         <select
           id={selectId}
           value={value.color}
-          onChange={(evt) => { if (evt.target.value === value.color) {onSelect.setColor(evt.target.value)} else {onSelect.setColor(evt.target.value); onSelect.setPage(1)} }}
+          onChange={(evt) => {
+            if (evt.target.value === value.color) {
+              onSelect.setColor(evt.target.value);
+            } else {
+              onSelect.setColor(evt.target.value);
+              onSelect.setPage(1);
+            }
+          }}
+          className={css.selectColor}
         >
           <option value="всі">всі</option>
           <option value="білий">білий</option>
@@ -22,12 +30,13 @@ export default function Filters({ value, onSelect }) {
           <option value="червоний">червоний</option>
         </select>
       </label>
-      <label htmlFor={selectId}>
+      <label htmlFor={selectId} className={css.labelPerPage}>
         Кількість фото на сторінці
         <select
           id={selectId}
           value={value.perPage}
           onChange={(evt) => onSelect.setPerPage(evt.target.value)}
+          className={css.selectPerPage}
         >
           <option value="4">4</option>
           <option value="6">6</option>

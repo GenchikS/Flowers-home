@@ -1,6 +1,89 @@
 .container{
     display: flex;
-    border: 1px solid #6d9cd2;;
+    border-bottom: 2px solid #6d9cd2;
     background-color: rgba(190, 190, 245, 0.6);
     justify-content: space-between;
+    padding: 8px;
 }
+
+.labelColor{
+    font-size: 12px;
+    color: #111111;
+    font-weight: 500;
+    width: 130px;
+    padding: 6px;
+    /* border: 1px solid #6d9cd2; */
+    border: 1px solid #11111194;
+    border-radius: 6px;
+    background-color: rgba(229, 235, 235, 0.6);
+}
+
+.labelPerPage{
+    font-size: 12px;
+    color: #111111;
+    font-weight: 500;
+    width: 130px;
+    padding: 6px;
+    border: 1px solid #11111194;
+    border-radius: 6px;
+    background-color: rgba(229, 235, 235, 0.6);
+}
+
+.selectColor{
+    font-size: 12px;
+    color: #111111;
+    border: 1px solid #11111194;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+.selectPerPage{
+    font-size: 12px;
+    color: #111111;
+    border: 1px solid #11111194;
+    border-radius: 3px;
+    background-color: #fff;
+    margin-left: 8px;
+}
+
+@media screen and (min-width: 768px) {
+
+.container{
+    padding: 14px 56px;
+}
+.labelColor, .labelPerPage{
+    display: flex;
+    width: 230px;
+    height: 30px;
+    font-size: 14px;
+    align-items: center;
+    
+    }
+
+.selectColor, .selectPerPage{
+    font-size: 14px;
+    margin-left: 10px;
+}
+}
+
+@media screen and (min-width: 1440px) {
+
+.container{
+    padding: 20px 80px;
+}
+.labelColor, .labelPerPage{
+    display: flex;
+    width: 280px;
+    height: 35px;
+    font-size: 16px;
+    align-items: center;
+    
+    }
+
+.selectColor, .selectPerPage{
+    font-size: 16px;
+    margin-left: 10px;
+    margin-left: 22px;
+}
+}
+
