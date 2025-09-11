@@ -15,9 +15,7 @@ export const fetchFlowers = createAsyncThunk(
 
 
     try {
-      const response = await axios.get(
-        `/?page=${page}&color=${color}&perPage=${perPage}`
-      );
+      const response = await axios.get(`/?page=${page}&color=${color}&perPage=${perPage}`);
       // console.log("response", response.data);
       return response.data.data;
     } catch (error) {

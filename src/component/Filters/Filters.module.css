@@ -1,0 +1,6 @@
+.container{
+    display: flex;
+    border: 1px solid #6d9cd2;;
+    background-color: rgba(190, 190, 245, 0.6);
+    justify-content: space-between;
+}
