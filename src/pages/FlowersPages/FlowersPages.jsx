@@ -17,6 +17,8 @@ export default function FlowersPages() {
   const isLoader = useSelector(selectLoading);
   
   const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(6);
+  const [color, setColor] = useState("всі");
 
   const flowersItems = flowers !== undefined && flowers.data;
 
@@ -32,32 +34,37 @@ export default function FlowersPages() {
   //  console.log("flowers ", flowers);
 
   useEffect(() => {
-    dispatch(fetchFlowers(page));
+    dispatch(fetchFlowers(page, perPage, color));
     // console.log("page", page);
-  }, [dispatch, page]);
+  }, [dispatch, page, perPage, color]);
 
   return isLoader ? (
     <Loader />
   ) : (
     <div>
-      <Filters />
+      <Filters
+        value={{ color, perPage }}
+        onSelect={{setColor, setPerPage}}
+      />
       <ul className={css.containerTitle}>
         {flowersItems.length &&
-          flowersItems.map((flower) => (
-            <li key={flower._id}>
-              {/* {console.log(flower.photo)} */}
-              <ImageCard
-                flower={flower.flower}
-                color={flower.color}
-                size={flower.size}
-                price={flower.price}
-                blossom={flower.blossom}
-                photo={flower.photo}
-                photoWeb={flower.photoWeb}
-                availability={flower.availability}
-              />
-            </li>
-          ))}
+          flowersItems
+            // .filter((flower) => flower.color === color)
+            .map((flower) => (
+              <li key={flower._id}>
+                {/* {console.log(flower.photo)} */}
+                <ImageCard
+                  flower={flower.flower}
+                  color={flower.color}
+                  size={flower.size}
+                  price={flower.price}
+                  blossom={flower.blossom}
+                  photo={flower.photo}
+                  photoWeb={flower.photoWeb}
+                  availability={flower.availability}
+                />
+              </li>
+            ))}
       </ul>
       {flowersItems.length && (
         <Paginations page={page} onUpdate={handleClick} />

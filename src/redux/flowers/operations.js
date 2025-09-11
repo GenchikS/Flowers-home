@@ -6,12 +6,15 @@ axios.defaults.baseURL = "https://flowers-home-bd.onrender.com";
 
 // const page = 2;
 
-export const fetchFlowers  = createAsyncThunk("flowers/fetchAll", async (page, thunkAPI) => {
+export const fetchFlowers = createAsyncThunk(
+  "flowers/fetchAll",
+  async (page, perPage, color, thunkAPI) => {
     try {
-        const response = await axios.get(`/?page=${page}`);
-        // console.log("response", response.data);
-        return response.data.data;
+      const response = await axios.get(`/?page=${page}&perPage=${perPage}&&color=${color}`);
+      // console.log("response", response.data);
+      return response.data.data;
     } catch (error) {
-        thunkAPI.rejectWithValue(error.message);
+      thunkAPI.rejectWithValue(error.message);
     }
-})
+  }
+);
