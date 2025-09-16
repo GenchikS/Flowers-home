@@ -1,7 +1,8 @@
 .containerFlowersPage{
     display: flex;
     flex-direction: column;
-    height: 800px;
+    /* height: 800px; */
+    /* height: 100%; */
 }
 
 .containerTitle{
@@ -17,8 +18,6 @@
     padding: 0;
     padding-top: 12px;
 }
-
-
 
 /* горизонтальний скрол в css */
 /* + */
@@ -98,8 +97,8 @@ padding-top: 22px
 }
 
 .containerCartPaginations{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+display: flex;
+flex-direction: column;
+width: 100%;
 }
 }
