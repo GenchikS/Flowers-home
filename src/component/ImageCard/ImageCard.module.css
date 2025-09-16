@@ -1,5 +1,5 @@
 .gallery{
-    border: 2px solid #6d9cd2;
+    border: 2px solid var(--border-color);
     border-radius: 8px;
      box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.3);
      
@@ -28,7 +28,7 @@
     width: 145px;
     height: 100%;
     margin: 0 auto;
-    border: 2px solid #6d9cd2;
+    border: 2px solid var(--border-color);
     border-radius: 8px;
 }
 
@@ -38,7 +38,7 @@
     letter-spacing: 2px;
     font-size: 20px;
     margin-bottom: 4px;
-    color: black;
+    color: var(--text-color-title-flower);
 }
 
 .containerText{
@@ -47,25 +47,25 @@
 }
 
 .text{
-    color: black;
+    color: var(--text-color-text-flower);
     font-size: 14px;
 }
 
 .textPrice{
     font-weight: 700;
-    color: #068617cf;;
+    color: var(--text-price-true);
     font-size: 16px;  
 }
 
 .textAvailability{
     font-weight: 700;
-    color: #068617cf;;
+    color: var(--text-price-true);
     font-size: 14px;  
 }
 
 .textAvailabilityNot{
     font-weight: 500;
-    color: red;;
+    color: var(--text-price-false);
     font-size: 14px;  
 }
 

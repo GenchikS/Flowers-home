@@ -6,12 +6,10 @@
 
 .containerTitle{
     min-width: 320px;
-    /* height: 100%; */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    color: #fff;
-    background-color: rgba(190, 190, 245, 0.6);
+    background-color: var(--bg-color-fl-page);
     justify-content: center;
     list-style-type: none;
     gap: 12px;
@@ -91,6 +89,7 @@ padding-top: 16px
 
 .containerFlowersPage{
     flex-direction: row;
+    height: 100%;
 }
 
 .containerTitle{

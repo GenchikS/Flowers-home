@@ -7,20 +7,18 @@ h1, p{
     flex-direction: column;
     min-width: 320px;
     height: 800px;
-    background-color: rgba(229, 235, 235, 0.6);;
+    background-color: var(--bg-color);
     padding-top: 46px;
     justify-content: center;
     align-items: center;
 }
 
 .title{
-    display: flex;
-    font-family: "Roboto", sans-serif;
     font-style: italic;
     font-weight: 400;
     font-size: 34px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color-title);
     margin-bottom: 22px;
 }
 
@@ -34,7 +32,7 @@ h1, p{
     font-style: normal;
     font-size: 22px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color-text);
     margin-bottom: 4px;
 }
 
@@ -44,7 +42,7 @@ h1, p{
     font-style: normal;
     font-size: 22px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color-text);
     text-align: left;
     margin-bottom: 4px;
 }
@@ -54,7 +52,7 @@ h1, p{
     font-style: normal;
     font-size: 22px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color-text);
     min-width: 320px;
     text-align: left;
     margin-bottom: 4px;
@@ -76,7 +74,7 @@ h1, p{
     font-style: normal;
     font-size: 22px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color-text);
     width: 100%;
     text-align: left;
     margin-left: 4px;
@@ -117,7 +115,7 @@ h1, p{
     font-style: normal;
     font-size: 22px;
     letter-spacing: 1px;
-    color: black;
+    color: var(--text-color-text);
     min-width: 320px;
     text-align: left;
     margin-bottom: 4px;

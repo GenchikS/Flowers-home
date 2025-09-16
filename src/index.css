@@ -1,11 +1,11 @@
-:root {
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  /* background-color: #242424; */
+  background-color: #242424;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -13,7 +13,25 @@
   -moz-osx-font-smoothing: grayscale;
   
   height: 100%;
-}
+} */
+ :root{
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+
+  --bg-color: rgba(229, 235, 235, 0.6);
+  --bg-color-fl-page: rgba(190, 190, 245, 0.6);
+  --bg-color-card: rgba(229, 235, 235, 0.6);
+  --text-color-title: black;
+  --text-color-text: black;
+  --text-color-title-flower: black;
+  --text-color-text-flower: black;
+  --text-price-true:#068617cf;
+  --text-price-false: red;
+  --border-color:#6d9cd2;
+  
+
+
+ }
 
 html{
   box-sizing: border-box;
@@ -33,7 +51,6 @@ a:hover {
 body {
   min-width: 320px;
   max-width: 1280px;
-  /* height: 800px; */
   margin: 0 auto;
 }
 
