@@ -1,5 +1,5 @@
 import css from "./FlowersPages.module.css";
-import { NavLink } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 import clsx from "clsx";
 
 
@@ -12,11 +12,11 @@ export default function FlowersPages() {
     <ul className={css.container}>
       <li className={css.list}>
         <NavLink to="/flowers/chrysanthemums" className={navi}>
-          Хрезантеми
+          Хризантеми
         </NavLink>
       </li>
       <li className={css.list}>
-        <NavLink to="/flowers/daisies" className={navi}>
+        <NavLink to="/flowers//daisies" className={navi}>
           Ромашки
         </NavLink>
       </li>

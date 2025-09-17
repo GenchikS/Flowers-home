@@ -16,12 +16,12 @@ export default function Navigation() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="flowers" className={navi}>
+        <NavLink to="/flowers" className={navi}>
           Квіти
         </NavLink>
       </li>
       <li>
-        <NavLink to="contacts" className={navi}>
+        <NavLink to="/contacts" className={navi}>
           Контакти
         </NavLink>
       </li>
