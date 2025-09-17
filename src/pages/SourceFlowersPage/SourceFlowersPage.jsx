@@ -10,7 +10,7 @@ import { fetchFlowers } from "../../redux/flowers/operations.js";
 
 
 
-export default function SourceFlowersPage({ titleSourceFlowers }) {
+export default function SourceFlowersPage({ titleSource }) {
   // console.log("titleSourceFlowers", titleSourceFlowers);
 
   const flowers = useSelector(selectFlowers);
@@ -22,7 +22,7 @@ export default function SourceFlowersPage({ titleSourceFlowers }) {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState("6");
   const [color, setColor] = useState(`всі`);
-  const [titleSource, setTitleSourse] = useState(titleSourceFlowers);
+  // const [titleSource, setTitleSourse] = useState(titleSourceFlowers);
 
   const handleClick = ({ title }) => {
     if (title === page + 1) {
