@@ -26,6 +26,7 @@
 }
 
 .selectColor, .selectPerPage, .selectSize{
+    width: 100px;
     font-size: 12px;
     color: var(--text-color-text);
     border: 1px solid #11111194;
@@ -47,7 +48,6 @@
 
 .selectColor, .selectPerPage, .selectSize{
     font-size: 14px;
-    margin-left: 10px;
 }
 }
 

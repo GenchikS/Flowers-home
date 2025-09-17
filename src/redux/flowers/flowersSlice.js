@@ -19,26 +19,25 @@ export const selectModalPhoto = (state) => state.flowers.modalPhoto;
 
 
 const flowersSlice = createSlice({
-    name: "flowers",
-    initialState,
-    extraReducers: builder => {
-        builder
-            .addCase(fetchFlowers.pending, (state) => {
-                state.isLoading = true;
-            })
-            .addCase(fetchFlowers.fulfilled, (state, action) => {
-              (state.isLoading = false),
-                (state.error = null),
-                // (state.items = console.log(action.payload)),
-                // (state.page = action.payload.page + 1),
-                (state.items = action.payload);
-                (state.modalPhoto = false);
-            })
-            .addCase(fetchFlowers.rejected, (state, action) => {
-                state.isLoading = false,
-                state.error = action.payload
-        })
-    }
-})
+  name: "/flowers/chrysanthemums",
+  initialState,
+  extraReducers: (builder) => {
+    builder
+      .addCase(fetchFlowers.pending, (state) => {
+        state.isLoading = true;
+      })
+      .addCase(fetchFlowers.fulfilled, (state, action) => {
+        (state.isLoading = false),
+          (state.error = null),
+          // (state.items = console.log(action.payload)),
+          // (state.page = action.payload.page + 1),
+          (state.items = action.payload);
+        state.modalPhoto = false;
+      })
+      .addCase(fetchFlowers.rejected, (state, action) => {
+        (state.isLoading = false), (state.error = action.payload);
+      });
+  },
+});
 
 export default flowersSlice.reducer;

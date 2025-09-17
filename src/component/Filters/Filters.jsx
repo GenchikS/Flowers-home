@@ -4,7 +4,7 @@ import { useId } from "react"
 export default function Filters({ value, onSelect }) {
   const selectId = useId();
   // console.log("value", value);
-  return (
+return (
     <div className={css.container}>
       <label htmlFor={selectId} className={css.labelColor}>
         Обрати колір квітів

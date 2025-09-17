@@ -1,23 +1,38 @@
-.containerFlowersPage{
-    display: flex;
-    flex-direction: column;
-    /* height: 800px; */
-    /* height: 100%; */
+ul{
+    margin: 0;
+    list-style-type: none;
 }
 
-.containerTitle{
-    min-width: 320px;
+.container{
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    height: 800px;
+    padding: 32px 0;
     background-color: var(--bg-color-fl-page);
-    justify-content: center;
-    list-style-type: none;
-    gap: 12px;
-    margin: 0;
-    padding: 0;
-    padding-top: 12px;
+    align-items: center;
 }
+
+.list{
+    margin-bottom: 28px;
+}
+
+.link{
+    font-style:  italic;
+    letter-spacing: 1px;
+    font-size: 26px;
+    font-weight: 400;
+    color: var(--text-color-title);
+    padding: 8px;
+}
+  
+  .link:hover{
+  width: 180px;
+  color: var(--text-color-title);
+  border: 1px solid #525151;
+  border-radius: 16px;
+  background-color: var(--bg-color-source-flower);
+  }
+
 
 /* горизонтальний скрол в css */
 /* + */

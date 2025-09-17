@@ -1,0 +1,19 @@
+.containerFlowersPage{
+    display: flex;
+    flex-direction: column;
+}
+
+
+.containerTitle{
+    min-width: 320px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: var(--bg-color-fl-page);
+    justify-content: center;
+    list-style-type: none;
+    gap: 12px;
+    margin: 0;
+    padding: 0;
+    padding-top: 12px;
+}
