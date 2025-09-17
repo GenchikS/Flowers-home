@@ -24,9 +24,12 @@ export default function App() {
            <Route path="/flowers" element={<FlowersPages />} />
            <Route
              path="/flowers/chrysanthemums"
-             element={<SourceFlowersPage />}
+             element={<SourceFlowersPage titleSourceFlowers ="хризантеми" />}
            />
-           <Route path="/flowers/daisies" element={<SourceFlowersPage />} />
+           <Route
+             path="/flowers/daisies"
+             element={<SourceFlowersPage titleSourceFlowers ="ромашки" />}
+           />
            <Route path="contacts" element={<ContactsPages />} />
            {/* <Route path="*" element={<NotFound />} /> */}
          </Routes>

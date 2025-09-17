@@ -11,12 +11,15 @@ export default function FlowersPages() {
   return (
     <ul className={css.container}>
       <li className={css.list}>
-        <NavLink to="/flowers/chrysanthemums" className={navi}>
+        <NavLink
+          to="/flowers/chrysanthemums"
+          className={navi}
+        >
           Хризантеми
         </NavLink>
       </li>
       <li className={css.list}>
-        <NavLink to="/flowers//daisies" className={navi}>
+        <NavLink to="/flowers/daisies" className={navi}>
           Ромашки
         </NavLink>
       </li>

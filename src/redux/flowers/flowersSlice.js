@@ -19,7 +19,7 @@ export const selectModalPhoto = (state) => state.flowers.modalPhoto;
 
 
 const flowersSlice = createSlice({
-  name: "/flowers/chrysanthemums",
+  name: "/flowers",
   initialState,
   extraReducers: (builder) => {
     builder

@@ -10,7 +10,8 @@ import { fetchFlowers } from "../../redux/flowers/operations.js";
 
 
 
-export default function SourceFlowersPage() {
+export default function SourceFlowersPage({ titleSourceFlowers }) {
+  // console.log("titleSourceFlowers", titleSourceFlowers);
 
   const flowers = useSelector(selectFlowers);
   const isLoader = useSelector(selectLoading);
@@ -21,6 +22,7 @@ export default function SourceFlowersPage() {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState("6");
   const [color, setColor] = useState(`всі`);
+  const [titleSource, setTitleSourse] = useState(titleSourceFlowers);
 
   const handleClick = ({ title }) => {
     if (title === page + 1) {
@@ -34,43 +36,43 @@ export default function SourceFlowersPage() {
     // console.log("page1", page);
     // console.log("perPage1", perPage);
     // console.log("color1", color);
-    dispatch(fetchFlowers({ page, perPage, color }));
+    dispatch(fetchFlowers({ page, perPage, color, titleSource }));
   }, [dispatch, page, perPage, color]);
 
-return isLoader ? (
-  <Loader />
-) : (
-  <div className={css.containerFlowersPage}>
-    <Filters
-      value={{ color, perPage }}
-      onSelect={{ setPage, setPerPage, setColor }}
-    />
-    <div className={css.containerCartPaginations}>
-      <ul className={css.containerTitle}>
-        {flowersItems.length &&
-          flowersItems
-            // .filter((flower) => flower.color === color)
-            .map((flower) => (
-              <li key={flower._id}>
-                {/* {console.log(flower.photo)} */}
-                <ImageCard
-                  flower={flower.flower}
-                  color={flower.color}
-                  size={flower.size}
-                  price={flower.price}
-                  blossom={flower.blossom}
-                  photo={flower.photo}
-                  photoWeb={flower.photoWeb}
-                  availability={flower.availability}
-                />
-              </li>
-            ))}
-      </ul>
+  return isLoader ? (
+    <Loader />
+  ) : (
+    <div className={css.containerFlowersPage}>
+      <Filters
+        value={{ color, perPage }}
+        onSelect={{ setPage, setPerPage, setColor }}
+      />
+      <div className={css.containerCartPaginations}>
+        <ul className={css.containerTitle}>
+          {flowersItems.length &&
+            flowersItems
+              // .filter((flower) => flower.color === color)
+              .map((flower) => (
+                <li key={flower._id}>
+                  {/* {console.log(flower.photo)} */}
+                  <ImageCard
+                    flower={flower.flower}
+                    color={flower.color}
+                    size={flower.size}
+                    price={flower.price}
+                    blossom={flower.blossom}
+                    photo={flower.photo}
+                    photoWeb={flower.photoWeb}
+                    availability={flower.availability}
+                  />
+                </li>
+              ))}
+        </ul>
 
-      {flowersItems.length && (
-        <Paginations page={page} onUpdate={handleClick} />
-      )}
+        {flowersItems.length && (
+          <Paginations page={page} onUpdate={handleClick} />
+        )}
+      </div>
     </div>
-  </div>
-);
+  );
 }
