@@ -43,7 +43,7 @@ export default function SourceFlowersPage({ titleSource }) {
   return isLoader ? (
     <div>
       <Loader />
-      <p className={css.textLoader}>Зачекайте завантажується галерея...</p>
+      <p className={css.textLoader}>Завантаження галереї...</p>
     </div>
   ) : (
     <div className={css.containerFlowersPage}>
