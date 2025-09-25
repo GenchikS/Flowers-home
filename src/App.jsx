@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import css from "./App.module.css";
 import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
-import AuthPages from "./pages/AuthPage/AuthPages.jsx";
+import LoginPages from "./pages/LoginPage/LoginPages.jsx";
 import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
@@ -33,7 +33,7 @@ export default function App() {
              element={<SourceFlowersPage titleSource="ромашки" />}
            />
            <Route path="contacts" element={<ContactsPages />} />
-           <Route path="auth" element={<AuthPages />} />
+           <Route path="login" element={<LoginPages />} />
            <Route path="register" element={<RegisterPages />} />
 
            {/* <Route path="*" element={<NotFound />} /> */}

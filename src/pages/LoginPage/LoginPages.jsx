@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 import Login from "../../component/Login/Login.jsx";
-import css from "./AuthPages.module.css";
+import css from "./LoginPages.module.css";
 
 
-export default function AuthPages() {
+export default function LoginPages() {
     return (
-      <div className={css.containerAuthPages}>
+      <div className={css.containerLoginPages}>
         <Login />
         <p className={css.textInfo}>--------------- Or ---------------</p>
         <NavLink to="/register" className={css.register}>

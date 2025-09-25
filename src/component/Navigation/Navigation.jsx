@@ -26,7 +26,7 @@ export default function Navigation() {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/auth" className={navi}>
+        <NavLink to="/login" className={navi}>
           LogIn
         </NavLink>
       </li>

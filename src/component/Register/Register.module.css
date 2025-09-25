@@ -1,7 +1,8 @@
-.titleLogin{
+.titleRegister{
     font-size: 18px;
     color:var(--text-color-text-transperent)
 }
+
 
 .containerForm{
     width: 100%;
@@ -10,13 +11,13 @@
     margin-top: 24px;
 }
 
-.labelEmail, .labelPassword{
+.labelName, .labelEmail, .labelPassword{
     font-size: 12px;
     color: var(--text-color-text-transperent);
     margin-left: 10px;
 }
 
-.userName, .email{
+.userName, .email, .userPassword{
     font-size: 18px;
     font-weight: 400;
     padding: 4px 12px;
@@ -27,19 +28,12 @@
     outline: none;
 }
 
-.userName:hover, .email:hover{
+.userName:hover, .email:hover, .userPassword:hover{
     background-color: rgba(0, 0, 255, 0.3);
 }
 
 .userName:focus, .email:focus{
     background-color: white;
-}
-
-.forgottenPassword{
-    font-size: 12px;
-    color: rgba(0, 0, 255, 0.9);
-    margin-left: 12px;
-    cursor: pointer;
 }
 
 .button{

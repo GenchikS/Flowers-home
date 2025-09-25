@@ -1,0 +1,41 @@
+.containerRegister{
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+    height: 800px;
+    background-color: var(--bg-color);
+    padding-top: 46px;
+    align-items: center;
+}
+
+.textInfo{
+    margin-top: 32px;
+}
+
+.login{
+    width: 80px;
+    height: 32px;
+    font-weight: 400;
+    text-align: center;
+    align-content: center;
+    border: 2px solid var(--border-color-black);
+    border-radius: 20px;
+    cursor: pointer;
+    color: var(--text-color-text);
+    background-color: rgba(0, 0, 255, 0.1);
+    margin-top: 30px;
+}
+
+.login:hover{
+    color: var(--text-color-text);
+    background-color: rgba(0, 0, 255, 0.3);
+}
+
+@media screen and (min-width: 768px){
+    .login{
+        width: 120px;
+        height: 36px;
+        font-size: 16px;
+        margin-top: 34px;
+    }
+}
