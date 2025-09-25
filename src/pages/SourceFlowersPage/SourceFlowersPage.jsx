@@ -49,7 +49,8 @@ export default function SourceFlowersPage({ titleSource }) {
       />
       <div className={css.containerCartPaginations}>
         <ul className={css.containerTitle}>
-          {flowersItems.length &&
+          {/* {console.log("flowersItems.length", flowersItems.length)} */}
+          {flowersItems.length ? (
             flowersItems
               // .filter((flower) => flower.color === color)
               .map((flower) => (
@@ -67,11 +68,16 @@ export default function SourceFlowersPage({ titleSource }) {
                     availability={flower.availability}
                   />
                 </li>
-              ))}
+              ))
+          ) : (
+            <p className={css.nowArray}>По запиту нічого не знайдено </p>
+          )}
         </ul>
 
-        {flowersItems.length && (
+        {flowersItems.length ? (
           <Paginations page={page} onUpdate={handleClick} />
+        ) : (
+          <p></p>
         )}
       </div>
     </div>

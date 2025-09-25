@@ -17,3 +17,9 @@
     padding: 0;
     padding-top: 12px;
 }
+
+.nowArray{
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--text-price-false);
+}
