@@ -3,7 +3,7 @@ import { useId } from "react"
 
 export default function Filters({ value, onSelect }) {
   const selectId = useId();
-  console.log("value", value);
+  // console.log("value", value);
 return (
     <div className={css.container}>
       <label htmlFor={selectId} className={css.labelColor}>
