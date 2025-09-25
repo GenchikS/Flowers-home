@@ -32,6 +32,16 @@
     border-radius: 8px;
 }
 
+.containerCode{
+    display: flex;
+     justify-content: space-between;
+}
+
+.textCode{
+    font-size: 14px;
+    color: #646cffc3;
+}
+
 .flower{
     font-family: "Bad Script", cursive;
     font-style: normal;
@@ -48,7 +58,7 @@
 
 .text{
     color: var(--text-color-text-flower);
-    font-size: 14px;
+    font-size: 13px;
 }
 
 .textPrice{

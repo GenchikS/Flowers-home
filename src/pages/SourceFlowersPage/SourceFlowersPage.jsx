@@ -56,6 +56,7 @@ export default function SourceFlowersPage({ titleSource }) {
                 <li key={flower._id}>
                   {/* {console.log(flower.photo)} */}
                   <ImageCard
+                    code={flower.code}
                     flower={flower.flower}
                     color={flower.color}
                     size={flower.size}

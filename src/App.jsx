@@ -20,7 +20,7 @@ export default function App() {
      <Layout>
        <Suspense fallback={null}>
          <Routes>
-           <Route path="/homePage" element={<HomePages />} />
+           <Route path="/" element={<HomePages />} />
            <Route path="/flowers" element={<FlowersPages />} />
            <Route
              path="/flowers/chrysanthemums"

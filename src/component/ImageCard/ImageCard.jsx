@@ -6,6 +6,7 @@ import { useState } from "react";
 
 
 export default function ImageCard({
+  code,
   flower,
   color,
   size,
@@ -40,6 +41,10 @@ export default function ImageCard({
         <img className={css.image} src={photoWeb} alt="фото" title="фото" />
         <ul className={css.list}>
           <li>
+            <div className={css.containerCode}>
+              <p className={css.textCode}>Код:</p>
+              <p className={css.textCode}>{code}</p>
+            </div>
             <p className={css.flower}>{flower}</p>
             <div className={css.containerText}>
               <p className={css.text}>Колір: </p>
