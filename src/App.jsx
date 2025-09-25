@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import css from "./App.module.css";
 import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
+import AuthPages from "./pages/AuthPage/AuthPages.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -24,13 +25,14 @@ export default function App() {
            <Route path="/flowers" element={<FlowersPages />} />
            <Route
              path="/flowers/chrysanthemums"
-             element={<SourceFlowersPage titleSource ="хризантеми" />}
+             element={<SourceFlowersPage titleSource="хризантеми" />}
            />
            <Route
              path="/flowers/daisies"
-             element={<SourceFlowersPage titleSource ="ромашки" />}
+             element={<SourceFlowersPage titleSource="ромашки" />}
            />
            <Route path="contacts" element={<ContactsPages />} />
+           <Route path="auth" element={<AuthPages />} />
            {/* <Route path="*" element={<NotFound />} /> */}
          </Routes>
        </Suspense>

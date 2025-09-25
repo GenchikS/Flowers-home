@@ -25,6 +25,11 @@ export default function Navigation() {
           Контакти
         </NavLink>
       </li>
+      <li>
+        <NavLink to="/auth" className={navi}>
+          LogIn
+        </NavLink>
+      </li>
     </ul>
   );
 }
