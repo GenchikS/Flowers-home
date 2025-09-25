@@ -3,6 +3,7 @@ import css from "./App.module.css";
 import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 import AuthPages from "./pages/AuthPage/AuthPages.jsx";
+import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -33,6 +34,8 @@ export default function App() {
            />
            <Route path="contacts" element={<ContactsPages />} />
            <Route path="auth" element={<AuthPages />} />
+           <Route path="register" element={<RegisterPages />} />
+
            {/* <Route path="*" element={<NotFound />} /> */}
          </Routes>
        </Suspense>

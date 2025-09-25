@@ -23,13 +23,16 @@
   --bg-color-card: rgba(229, 235, 235, 0.6);
   --bg-color-layout: #09981ccb;
   --bg-color-source-flower: #66d675;
+  --bg-color-white: rgba(255, 255, 255, 0.8);
   --text-color-title: black;
   --text-color-text: black;
+  --text-color-text-transperent: rgba(0, 0, 0, 0.8);
   --text-color-title-flower: black;
   --text-color-text-flower: black;
   --text-price-true:#068617cf;
   --text-price-false: red;
   --border-color:#6d9cd2;
+  --border-color-black: rgba(0, 0, 0, 0.3);
   
 }
 

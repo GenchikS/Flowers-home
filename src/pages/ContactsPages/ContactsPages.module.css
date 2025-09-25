@@ -9,7 +9,7 @@ h1, p{
     height: 800px;
     background-color: var(--bg-color);
     padding-top: 46px;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
 }
 
