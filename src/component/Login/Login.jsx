@@ -24,17 +24,27 @@ export default function Login() {
             <label htmlFor={emaiFieldId} className={css.labelEmail}>
               email
             </label>
-            <Field name="email" type="text" className={css.email} />
+            <Field
+              name="email"
+              type="text"
+              className={css.email}
+              id={emaiFieldId}
+            />
             <label htmlFor={passwordFieldId} className={css.labelPassword}>
               password
             </label>
-            <Field name="password" type="text" className={css.userName} />
+            <Field
+              name="password"
+              type="text"
+              className={css.userName}
+              id={passwordFieldId}
+            />
             <a className={css.forgottenPassword}>Forgotten password?</a>
             <button type="submit" className={css.button}>
               Submit
             </button>
           </Form>
         </Formik>
-    </div>
+      </div>
     );
 }
