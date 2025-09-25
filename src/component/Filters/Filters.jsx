@@ -3,7 +3,7 @@ import { useId } from "react"
 
 export default function Filters({ value, onSelect }) {
   const selectId = useId();
-  // console.log("value", value);
+  console.log("value", value);
 return (
     <div className={css.container}>
       <label htmlFor={selectId} className={css.labelColor}>
@@ -34,12 +34,12 @@ return (
         Обрати розмір квітів
         <select
           id={selectId}
-          value={value.color}
+          value={value.size}
           onChange={(evt) => {
-            if (evt.target.value === value.color) {
-              onSelect.setColor(evt.target.value);
+            if (evt.target.value === value.size) {
+              onSelect.setSize(evt.target.value);
             } else {
-              onSelect.setColor(evt.target.value);
+              onSelect.setSize(evt.target.value);
               onSelect.setPage(1);
             }
           }}

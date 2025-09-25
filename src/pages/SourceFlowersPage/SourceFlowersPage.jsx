@@ -22,6 +22,7 @@ export default function SourceFlowersPage({ titleSource }) {
   const [page, setPage] = useState(1);
   const [perPage, setPerPage] = useState("6");
   const [color, setColor] = useState(`всі`);
+  const [size, setSize] = useState(`всі`);
   // const [titleSource, setTitleSourse] = useState(titleSourceFlowers);
 
   const handleClick = ({ title }) => {
@@ -36,16 +37,16 @@ export default function SourceFlowersPage({ titleSource }) {
     // console.log("page1", page);
     // console.log("perPage1", perPage);
     // console.log("color1", color);
-    dispatch(fetchFlowers({ page, perPage, color, titleSource }));
-  }, [dispatch, page, perPage, color]);
+    dispatch(fetchFlowers({ page, perPage, color, titleSource, size }));
+  }, [dispatch, page, perPage, color, size]);
 
   return isLoader ? (
     <Loader />
   ) : (
     <div className={css.containerFlowersPage}>
       <Filters
-        value={{ color, perPage }}
-        onSelect={{ setPage, setPerPage, setColor }}
+        value={{ color, perPage, size }}
+        onSelect={{ setPage, setPerPage, setColor, setSize }}
       />
       <div className={css.containerCartPaginations}>
         <ul className={css.containerTitle}>
