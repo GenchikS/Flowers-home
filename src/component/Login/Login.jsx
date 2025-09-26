@@ -40,7 +40,7 @@ export default function Login() {
               className={css.userName}
               id={passwordFieldId}
             />
-            <a className={css.forgottenPassword}>Forgotten password?</a>
+            <a className={css.forgottenPassword}>Forget password?</a>
             <button type="submit" className={css.button}>
               Submit
             </button>
