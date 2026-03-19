@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchFlowers } from "./operations.js";
+import { fetchFlowers } from "../operations.js";
 
 const initialState = {
   flowers: {
@@ -7,8 +7,8 @@ const initialState = {
     isLoading: false,
     error: null,
     modalPhoto: false,
-    page: 1
-  }
+    page: 1,
+  },
 };
 
 // export const selectPages = (state) => state.flowers.page;
@@ -16,7 +16,6 @@ export const selectFlowers = (state) => state.flowers.items;
 export const selectLoading = (state) => state.flowers.isLoading;
 export const selectError = (state) => state.flowers.error;
 export const selectModalPhoto = (state) => state.flowers.modalPhoto;
-
 
 const flowersSlice = createSlice({
   name: "/flowers",

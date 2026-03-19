@@ -1,6 +1,8 @@
 import { useId } from "react";
 import css from "./Login.module.css";
 import { Field, Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { loginUser } from "../../redux/operations.js";
 
 const initialValues = {
   email: "",
@@ -8,12 +10,13 @@ const initialValues = {
 };
 
 export default function Login() {
+  const dispatch = useDispatch()
     const emaiFieldId = useId();
     const passwordFieldId = useId();
 
-    const handleSubmit = (values, actions) => {
-        console.log('values', values);
-        actions.resetForm();
+  const handleSubmit = (values, actions) => {
+      dispatch(loginUser(values));
+      actions.resetForm();
 
     }
 
