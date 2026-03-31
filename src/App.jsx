@@ -37,8 +37,7 @@ export default function App() {
            <Route path="/contacts" element={<ContactsPages />} />
            <Route path="/login" element={<LoginPages />} />
            <Route path="/register" element={<RegisterPages />} />
-
-           {/* <Route path="*" element={<NotFound />} /> */}
+          {/* <Route path="*" element={<NotFound />} /> */}
          </Routes>
        </Suspense>
      </Layout>
