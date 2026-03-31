@@ -1,6 +1,8 @@
 import { useId } from "react";
 import css from "./Register.module.css";
 import { Field, Form, Formik } from "formik";
+import { registerUser } from "../../redux/user/operations.js";
+import { useDispatch } from "react-redux";
 
 const initialValues = {
     name: "",
@@ -9,14 +11,15 @@ const initialValues = {
 };
 
 export default function Register() {
+   const dispatch = useDispatch();
     const nameRegisterFieldId = useId();
     const emaiRegisterFieldId = useId();
     const passwordRegisterFieldId = useId();
 
     const handleSubmit = (values, actions) => {
-        console.log('values', values);
-        actions.resetForm();
-
+      // console.log('values', values);
+      dispatch(registerUser(values))
+      actions.resetForm();
     }
 
     return (
