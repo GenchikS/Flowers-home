@@ -79,6 +79,7 @@ export default function SourceFlowersPage({ titleSource }) {
             <p className={css.nowArray}>По запиту нічого не знайдено </p>
           )}
         </ul>
+
         {flowersItems.length ? (
           <Paginations page={page} onUpdate={handleClick} />
         ) : (
