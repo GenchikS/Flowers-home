@@ -4,7 +4,6 @@ import clsx from "clsx";
 
 
 const navi = (props) => {
-  // console.log(`props`, props);
   return clsx(css.link, props.isActive && css.active);
 }
 

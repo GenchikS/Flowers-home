@@ -8,7 +8,7 @@ export default function Layout({ children }) {
         <AppBar />
       </div>
       {children}
-      {/* children можна замінити на Outlet, результат не зміниться */}
+      {/* {<Outlet/>}  children можна замінити на Outlet, результат не зміниться */}
     </div>
   );
 }

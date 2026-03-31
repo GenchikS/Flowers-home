@@ -1,15 +1,14 @@
-import css from "./SourceFlowersPage.module.css";
+import css from "./SourceFlowersPage.module.css"
 import { useDispatch, useSelector } from "react-redux";
 import Paginations from "../../component/Paginations/Paginations.jsx";
-import {
-  selectFlowers,
-  selectLoading,
-} from "../../redux/flowers/flowersSlice.js";
+import { selectFlowers, selectLoading } from "../../redux/flowers/flowersSlice.js";
 import ImageCard from "../../component/ImageCard/ImageCard.jsx";
 import Loader from "../../component/Loader/Loader.jsx";
 import Filters from "../../component/Filters/Filters.jsx";
 import { useEffect, useState } from "react";
-import { fetchFlowers } from "../../redux/operations.js";
+import { fetchFlowers } from "../../redux/flowers/operations.js";
+
+
 
 export default function SourceFlowersPage({ titleSource }) {
   // console.log("titleSourceFlowers", titleSourceFlowers);
@@ -24,7 +23,6 @@ export default function SourceFlowersPage({ titleSource }) {
   const [perPage, setPerPage] = useState("6");
   const [color, setColor] = useState(`всі`);
   const [size, setSize] = useState(`всі`);
-
   // const [titleSource, setTitleSourse] = useState(titleSourceFlowers);
 
   const handleClick = ({ title }) => {

@@ -8,11 +8,11 @@ import { store } from './redux/store.js';
 
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <Provider store={store}>
-      <BrowserRouter>
+  <BrowserRouter>
+    <StrictMode>
+      <Provider store = {store}>
         <App />
-      </BrowserRouter>
-    </Provider>
-  </StrictMode>
+      </Provider>
+    </StrictMode>
+  </BrowserRouter>
 );

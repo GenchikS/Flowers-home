@@ -4,8 +4,6 @@ import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 import LoginPages from "./pages/LoginPage/LoginPages.jsx";
 import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
-// import { useSelector } from "react-redux";
-// import {selectUser} from "../src/redux/user/userSlice.js"
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -13,12 +11,12 @@ const SourceFlowersPage = lazy(() => import(`./pages/SourceFlowersPage/SourceFlo
 );
 const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
 
+
+
 // axios.defaults.baseURL = `https://flowers-home-bd.onrender.com`;
 
 
 export default function App() {
-  // const name = useSelector(selectUser);
-  console.log(name);
  return (
    <div className={css.container}>
      <Layout>
@@ -34,9 +32,9 @@ export default function App() {
              path="/flowers/daisies"
              element={<SourceFlowersPage titleSource="ромашки" />}
            />
-           <Route path="/contacts" element={<ContactsPages />} />
-           <Route path="/login" element={<LoginPages />} />
-           <Route path="/register" element={<RegisterPages />} />
+           <Route path="contacts" element={<ContactsPages />} />
+           <Route path="login" element={<LoginPages />} />
+           <Route path="register" element={<RegisterPages />} />
 
            {/* <Route path="*" element={<NotFound />} /> */}
          </Routes>
