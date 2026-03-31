@@ -12,9 +12,7 @@ const SourceFlowersPage = lazy(() => import(`./pages/SourceFlowersPage/SourceFlo
 const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
 
 
-
 // axios.defaults.baseURL = `https://flowers-home-bd.onrender.com`;
-
 
 export default function App() {
  return (
