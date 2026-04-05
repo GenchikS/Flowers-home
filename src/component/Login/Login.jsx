@@ -1,8 +1,10 @@
 import { useId } from "react";
 import css from "./Login.module.css";
 import { Field, Form, Formik } from "formik";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../redux/user/operations.js";
+import { selectIsLogin } from "../../redux/user/usersSliceLogin.js";
+import { Navigate } from "react-router-dom";
 
 const initialValues = {
   email: "",
@@ -10,16 +12,23 @@ const initialValues = {
 };
 
 export default function Login() {
-   const dispatch = useDispatch();
-    const emaiFieldId = useId();
-    const passwordFieldId = useId();
+  const dispatch = useDispatch();
+  const emaiFieldId = useId();
+  const passwordFieldId = useId();
+  const userIsLogin = useSelector(selectIsLogin);
 
     const handleSubmit = (values, actions) => {
-      console.log('values', values);
+      // console.log('values', values);
       dispatch(loginUser(values));
       actions.resetForm();
-
-    }
+      // console.log("userIsLogin", userIsLogin);
+  }
+  
+      if (userIsLogin) {
+          // добавити бібліотеку успішної реєстрації
+          // console.log(userIsLogin);
+        return <Navigate to="/flowers" />;
+          }
 
     return (
       <div>

@@ -2,20 +2,21 @@ import { createSlice } from "@reduxjs/toolkit";
 import { registerUser } from "./operations.js";
 
 const initialState = {
-  users: {
+  usersRegister: {
     item: [],
+    message: null,
     error: null,
     isLoading: false,
     isLogin: false,
   },
 };
 
-export const selectUser = (state) => state.users.item;
-export const selectLoading = (state) => state.users.isLoading;
-export const selectError = (state) => state.users.error;
+export const selectMessageRegister = (state) => state.usersRegister.message;
+export const selectLoadingRegister = (state) => state.usersRegister.isLoading;
+export const selectErrorRegister = (state) => state.usersRegister.error;
 
 
-const usersSlice = createSlice({
+const usersSliceRegister = createSlice({
   name: "/register",
   initialState,
     extraReducers: (builder) => {
@@ -26,7 +27,7 @@ const usersSlice = createSlice({
             .addCase(registerUser.fulfilled, (state, action) => {
                 state.isLoading = false,
                 state.error = null,
-                state.item = action.payload
+                state.message = action.payload
             })
             .addCase(registerUser.rejected, (state, action) => {
                 state.isLoading = false,
@@ -35,4 +36,4 @@ const usersSlice = createSlice({
   }
 });
 
-export default usersSlice.reducer
+export default usersSliceRegister.reducer

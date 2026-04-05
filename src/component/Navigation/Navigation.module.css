@@ -24,12 +24,21 @@
   background-color: var(--border-color);
   }
 
+.userName{
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+}
+
 @media screen and (min-width: 488px){
   .containerAll{
     padding: 20px 10px;
   }
 
-.link{
+.link, .userName{
   font-size: 18px;
 }
 }
@@ -39,7 +48,7 @@
     padding: 24px 12px;
   }
 
-.link{
+.link, .userName{
   font-size: 24px;
 }
 }
@@ -49,7 +58,7 @@
     padding: 28px 12px;
   }
 
-.link{
+.link, .userName{
   font-size: 32px;
 }
 }

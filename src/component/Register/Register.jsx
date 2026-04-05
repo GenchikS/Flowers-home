@@ -4,7 +4,7 @@ import { Field, Form, Formik } from "formik";
 import { registerUser } from "../../redux/user/operations.js";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { selectError, selectUser } from "../../redux/user/usersSlice.js";
+import {selectMessageRegister} from "../../redux/user/usersSliceRegister.js";
 import { Navigate } from "react-router-dom";
 
 const initialValues = {
@@ -19,7 +19,8 @@ export default function Register() {
   const emaiRegisterFieldId = useId();
   const passwordRegisterFieldId = useId();
 
-  const user = useSelector(selectUser);
+  const user = useSelector(selectMessageRegister);
+  // console.log("user Regis", user);
   // const error = useSelector(selectError);
 
   const handleSubmit = (values, actions) => {
@@ -30,6 +31,7 @@ export default function Register() {
 
   if (user) {
     // добавити бібліотеку успішної реєстрації
+    console.log(user.message)
     return <Navigate to="/login" replace />;
   }
 
