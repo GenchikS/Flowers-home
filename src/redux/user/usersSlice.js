@@ -16,7 +16,7 @@ export const selectError = (state) => state.users.error;
 
 
 const usersSlice = createSlice({
-  name: "/user/register",
+  name: "/register",
   initialState,
     extraReducers: (builder) => {
         builder
