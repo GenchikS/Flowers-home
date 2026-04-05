@@ -3,6 +3,9 @@ import css from "./Register.module.css";
 import { Field, Form, Formik } from "formik";
 import { registerUser } from "../../redux/user/operations.js";
 import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { selectError, selectUser } from "../../redux/user/usersSlice.js";
+import { Navigate } from "react-router-dom";
 
 const initialValues = {
     name: "",
@@ -11,17 +14,25 @@ const initialValues = {
 };
 
 export default function Register() {
-   const dispatch = useDispatch();
-    const nameRegisterFieldId = useId();
-    const emaiRegisterFieldId = useId();
-    const passwordRegisterFieldId = useId();
-
-    const handleSubmit = (values, actions) => {
+  const dispatch = useDispatch();
+  const nameRegisterFieldId = useId();
+  const emaiRegisterFieldId = useId();
+  const passwordRegisterFieldId = useId();
+  
+  const user = useSelector(selectUser);
+  // const error = useSelector(selectError);
+  
+  const handleSubmit = (values, actions) => {
       // console.log('values', values);
       dispatch(registerUser(values))
       actions.resetForm();
-    }
-
+  }
+  
+  if (user) {
+   return <Navigate to="/login" replace />;
+  }
+  // console.log(error);
+  
     return (
       <div>
         <h5 className={css.titleRegister}>Register form</h5>

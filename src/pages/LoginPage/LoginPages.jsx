@@ -4,7 +4,7 @@ import css from "./LoginPages.module.css";
 
 
 export default function LoginPages() {
-    return (
+  return (
       <div className={css.containerLoginPages}>
         <Login />
         <p className={css.textInfo}>--------------- Or ---------------</p>

@@ -32,9 +32,9 @@ export default function App() {
              path="/flowers/daisies"
              element={<SourceFlowersPage titleSource="ромашки" />}
            />
-           <Route path="contacts" element={<ContactsPages />} />
-           <Route path="login" element={<LoginPages />} />
-           <Route path="register" element={<RegisterPages />} />
+           <Route path="/contacts" element={<ContactsPages />} />
+           <Route path="/login" element={<LoginPages />} />
+           <Route path="/register" element={<RegisterPages />} />
 
            {/* <Route path="*" element={<NotFound />} /> */}
          </Routes>
