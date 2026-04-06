@@ -1,7 +1,7 @@
 import css from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
-import { selectIsLogin, selectItem } from "../../redux/user/usersSlice.js";
+import { selectIsLogin, selectItem, selectRole } from "../../redux/user/usersSlice.js";
 import { useDispatch, useSelector } from "react-redux";
 import { logoutUser } from "../../redux/user/operations.js";
 
@@ -11,10 +11,11 @@ const navi = (props) => {
 }
 
 export default function Navigation() {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const userIsLogin = useSelector(selectIsLogin);
   const userItem = useSelector(selectItem);
-  // console.log("userItem", userItem);
+  const userRole = useSelector(selectRole);
+  // console.log("userRole", userRole);
 
 const handleClick = () => {
        const sessionId = userItem.data.sessionId;
@@ -29,9 +30,15 @@ const handleClick = () => {
         </NavLink>
       </li>
       <li>
-        <NavLink to="/flowers" className={navi}>
-          Квіти
-        </NavLink>
+        {userRole == "admin" ? (
+          <NavLink to="/flowers" className={navi}>
+            Квіти adm
+          </NavLink>
+        ) : (
+          <NavLink to="/flowers" className={navi}>
+            Квіти
+          </NavLink>
+        )}
       </li>
       <li>
         <NavLink to="/contacts" className={navi}>

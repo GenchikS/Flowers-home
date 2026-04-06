@@ -4,6 +4,7 @@ import { loginUser, logoutUser, registerUser } from "./operations.js";
 const initialState = {
   users: {
     item: [],
+    role: "user",
     message: null,
     error: null,
     isLoading: false,
@@ -12,6 +13,7 @@ const initialState = {
 };
 
 export const selectItem = (state) => state.users.item;
+export const selectRole = (state) => state.users.role;
 export const selectMessage = (state) => state.users.message;
 export const selectLoading = (state) => state.users.isLoading;
 export const selectError = (state) => state.users.error;
@@ -39,9 +41,10 @@ const usersSlice = createSlice({
                 state.isLoading = true
             })
             .addCase(loginUser.fulfilled, (state, action) => {
-                ((state.isLoading = false),
+                (state.isLoading = false),
                 (state.error = null),
-                (state.item = action.payload));
+                (state.item = action.payload);
+                (state.role = action.payload.data.role);
                 (state.isLogin = true)
             })
             .addCase(loginUser.rejected, (state, action) => {
