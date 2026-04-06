@@ -2,7 +2,8 @@ import css from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
 import { selectIsLogin, selectItem } from "../../redux/user/usersSlice.js";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { logoutUser } from "../../redux/user/operations.js";
 
 
 const navi = (props) => {
@@ -10,9 +11,15 @@ const navi = (props) => {
 }
 
 export default function Navigation() {
+    const dispatch = useDispatch();
   const userIsLogin = useSelector(selectIsLogin);
   const userItem = useSelector(selectItem);
   // console.log("userItem", userItem);
+
+const handleClick = () => {
+       const sessionId = userItem.data.sessionId;
+        dispatch(logoutUser({ sessionId: sessionId }));
+  }
 
   return (
     <ul className={css.containerAll}>
@@ -39,7 +46,7 @@ export default function Navigation() {
         ) : (
           <div className={css.userContainer}>
             <p className={css.userName}>{userItem.data.name}</p>
-            <NavLink to="/logout" className={css.userExit}>
+            <NavLink to="/" className={css.userExit} onClick={handleClick}>
               Вихід
             </NavLink>
           </div>

@@ -32,6 +32,12 @@
     background-color: rgba(0, 0, 255, 0.3);
 }
 
+.textLoader{
+    font-size: 14px;
+    margin-top: 24px;
+    text-align: center;
+}
+
 @media screen and (min-width: 768px){
     .register{
         width: 120px;

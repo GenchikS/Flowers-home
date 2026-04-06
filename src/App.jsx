@@ -4,7 +4,6 @@ import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 import LoginPages from "./pages/LoginPage/LoginPages.jsx";
 import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
-import Logout from "./component/Logout/Logout.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -36,7 +35,6 @@ export default function App() {
             <Route path="/contacts" element={<ContactsPages />} />
             <Route path="/login" element={<LoginPages />} />
             <Route path="/register" element={<RegisterPages />} />
-            <Route path="/logout" element={<Logout />} />
             {/* <Route path="*" element={<NotFound />} /> */}
           </Routes>
         </Suspense>

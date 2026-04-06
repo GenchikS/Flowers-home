@@ -16,21 +16,20 @@ export default function Login() {
   const emaiFieldId = useId();
   const passwordFieldId = useId();
   const userIsLogin = useSelector(selectIsLogin);
-
-    const handleSubmit = (values, actions) => {
+  
+  const handleSubmit = (values, actions) => {
       // console.log('values', values);
       dispatch(loginUser(values));
       actions.resetForm();
-      // console.log("userIsLogin", userIsLogin);
   }
   
-      if (userIsLogin) {
+  if (userIsLogin) {
           // добавити бібліотеку успішної реєстрації
           // console.log(userIsLogin);
-        return <Navigate to="/flowers" />;
-          }
+  return <Navigate to="/flowers" />;
+  }
 
-    return (
+return (
       <div>
         <h5 className={css.titleLogin}>Login form </h5>
         <Formik initialValues={initialValues} onSubmit={handleSubmit}>
