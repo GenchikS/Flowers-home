@@ -1,7 +1,7 @@
 import css from "./Navigation.module.css";
 import { NavLink } from "react-router-dom";
 import clsx from "clsx";
-import { selectIsLogin, selectItemLogin } from "../../redux/user/usersSliceLogin.js";
+import { selectIsLogin, selectItem } from "../../redux/user/usersSlice.js";
 import { useSelector } from "react-redux";
 
 
@@ -11,7 +11,7 @@ const navi = (props) => {
 
 export default function Navigation() {
   const userIsLogin = useSelector(selectIsLogin);
-  const userItem = useSelector(selectItemLogin);
+  const userItem = useSelector(selectItem);
   // console.log("userItem", userItem);
 
   return (
@@ -37,7 +37,12 @@ export default function Navigation() {
             LogIn
           </NavLink>
         ) : (
-          <p className={css.userName}>{userItem.data.name}</p>
+          <div className={css.userContainer}>
+            <p className={css.userName}>{userItem.data.name}</p>
+            <NavLink to="/logout" className={css.userExit}>
+              Вихід
+            </NavLink>
+          </div>
         )}
       </li>
     </ul>

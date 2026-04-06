@@ -4,7 +4,7 @@ import { Field, Form, Formik } from "formik";
 import { registerUser } from "../../redux/user/operations.js";
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import {selectMessageRegister} from "../../redux/user/usersSliceRegister.js";
+import {selectMessage} from "../../redux/user/usersSlice.js";
 import { Navigate } from "react-router-dom";
 
 const initialValues = {
@@ -19,7 +19,7 @@ export default function Register() {
   const emaiRegisterFieldId = useId();
   const passwordRegisterFieldId = useId();
 
-  const user = useSelector(selectMessageRegister);
+  const user = useSelector(selectMessage);
   // console.log("user Regis", user);
   // const error = useSelector(selectError);
 

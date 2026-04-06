@@ -3,7 +3,7 @@ import css from "./Login.module.css";
 import { Field, Form, Formik } from "formik";
 import { useDispatch, useSelector } from "react-redux";
 import { loginUser } from "../../redux/user/operations.js";
-import { selectIsLogin } from "../../redux/user/usersSliceLogin.js";
+import { selectIsLogin } from "../../redux/user/usersSlice.js";
 import { Navigate } from "react-router-dom";
 
 const initialValues = {

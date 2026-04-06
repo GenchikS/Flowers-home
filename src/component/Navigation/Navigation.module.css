@@ -11,9 +11,10 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
     list-style-type: none;
     border-bottom: 2px solid #2276d6;
-    padding: 16px 12px;
+    padding: 8px 8px;
     margin: 0;
 }
 
@@ -24,6 +25,12 @@
   background-color: var(--border-color);
   }
 
+.userContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .userName{
     font-family: "Bad Script", cursive;
     font-style: normal;
@@ -33,9 +40,17 @@
     color: #fff;
 }
 
+.userExit{
+    font-family: "Bad Script", cursive;
+    font-style: normal;
+    letter-spacing: 1px;
+    font-size: 10px;
+    color: #fff;
+}
+
 @media screen and (min-width: 488px){
   .containerAll{
-    padding: 20px 10px;
+    padding: 16px 10px;
   }
 
 .link, .userName{
@@ -45,17 +60,21 @@
 
 @media screen and (min-width: 768px){
   .containerAll{
-    padding: 24px 12px;
+    padding: 20px 12px;
   }
 
 .link, .userName{
   font-size: 24px;
 }
+
+.userExit{
+  font-size: 16px;
+}
 }
 
 @media screen and (min-width: 1440px){
 .containerAll{
-    padding: 28px 12px;
+    padding: 24px 12px;
   }
 
 .link, .userName{

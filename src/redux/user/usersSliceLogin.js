@@ -12,11 +12,11 @@ const initialState = {
   },
 };
 
-export const selectItemLogin = (state) => state.usersLogin.item;
-export const selectMessageLogin = (state) => state.usersLogin.message;
-export const selectLoadingLogin = (state) => state.usersLogin.isLoading;
-export const selectErrorLogin = (state) => state.usersLogin.error;
-export const selectIsLogin = (state) => state.usersLogin.isLogin;
+// export const selectItemLogin = (state) => state.usersLogin.item;
+// export const selectMessageLogin = (state) => state.usersLogin.message;
+// export const selectLoadingLogin = (state) => state.usersLogin.isLoading;
+// export const selectErrorLogin = (state) => state.usersLogin.error;
+// export const selectIsLogin = (state) => state.usersLogin.isLogin;
 
 const userSliceLogin = createSlice({
   name: "/login",

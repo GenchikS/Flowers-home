@@ -4,8 +4,7 @@ import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 import LoginPages from "./pages/LoginPage/LoginPages.jsx";
 import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
-// import { useSelector } from "react-redux";
-// import { selectIsLogin } from "./redux/user/usersSliceLogin.js";
+import Logout from "./component/Logout/Logout.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -20,27 +19,28 @@ const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
 
 export default function App() {
   return (
-   <div className={css.container}>
-     <Layout>
-       <Suspense fallback={null}>
-         <Routes>
-           <Route path="/" element={<HomePages />} />
-           <Route path="/flowers" element={<FlowersPages />} />
-           <Route
-             path="/flowers/chrysanthemums"
-             element={<SourceFlowersPage titleSource="хризантеми" />}
-           />
-           <Route
-             path="/flowers/daisies"
-             element={<SourceFlowersPage titleSource="ромашки" />}
-           />
-           <Route path="/contacts" element={<ContactsPages />} />
-           <Route path="/login" element={<LoginPages />} />
-           <Route path="/register" element={<RegisterPages />} />
-           {/* <Route path="*" element={<NotFound />} /> */}
-         </Routes>
-       </Suspense>
-     </Layout>
-   </div>
- );
+    <div className={css.container}>
+      <Layout>
+        <Suspense fallback={null}>
+          <Routes>
+            <Route path="/" element={<HomePages />} />
+            <Route path="/flowers" element={<FlowersPages />} />
+            <Route
+              path="/flowers/chrysanthemums"
+              element={<SourceFlowersPage titleSource="хризантеми" />}
+            />
+            <Route
+              path="/flowers/daisies"
+              element={<SourceFlowersPage titleSource="ромашки" />}
+            />
+            <Route path="/contacts" element={<ContactsPages />} />
+            <Route path="/login" element={<LoginPages />} />
+            <Route path="/register" element={<RegisterPages />} />
+            <Route path="/logout" element={<Logout />} />
+            {/* <Route path="*" element={<NotFound />} /> */}
+          </Routes>
+        </Suspense>
+      </Layout>
+    </div>
+  );
 }
