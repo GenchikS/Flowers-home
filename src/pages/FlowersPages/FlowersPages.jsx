@@ -1,12 +1,12 @@
 import css from "./FlowersPages.module.css";
 import { NavLink} from "react-router-dom";
 import clsx from "clsx";
-import { useSelector } from "react-redux";
-import { selectRole } from "../../redux/user/usersSlice.js";
+// import { useSelector } from "react-redux";
+// import { selectRole } from "../../redux/user/usersSlice.js";
 
 
 export default function FlowersPages() {
-  const userRole = useSelector(selectRole);
+  // const userRole = useSelector(selectRole);
 
     const navi = (props) => {
       return clsx(css.link, props.isActive && css.active);
@@ -16,7 +16,7 @@ export default function FlowersPages() {
     <ul className={css.container}>
       {/* {userRole == "admin" && */}
         <li className={css.list}>
-        <NavLink to="/admin/flowers" className={css.admin}>
+        <NavLink to="/admin/flowers" className={css.textCorrecte}>
           Редагувати
         </NavLink>
         </li>

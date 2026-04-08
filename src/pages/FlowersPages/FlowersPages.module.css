@@ -16,7 +16,7 @@ ul{
     margin-bottom: 28px;
 }
 
-.admin{
+.textCorrecte{
     font-style:  italic;
     letter-spacing: 1px;
     font-size: 16px;
@@ -24,13 +24,13 @@ ul{
     margin-bottom: 28px;
 }
 
-  .admin:hover{
+  .textCorrecte:hover{
   width: 180px;
   color: var(--text-color-title);
   border: 1px solid #525151;
-  border-radius: 16px;
+  border-radius: 12px;
   background-color: var(--bg-color-card);
-  padding: 8px;
+  padding: 4px;
   }
 
 .link{
@@ -39,14 +39,13 @@ ul{
     font-size: 26px;
     font-weight: 400;
     color: var(--text-color-title);
-    padding: 8px;
+    padding: 6px;
 }
   
   .link:hover{
-  width: 180px;
   color: var(--text-color-title);
   border: 1px solid #525151;
-  border-radius: 16px;
+  border-radius: 14px;
   background-color: var(--bg-color-source-flower);
   }
 

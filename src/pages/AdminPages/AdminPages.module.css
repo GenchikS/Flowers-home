@@ -22,13 +22,12 @@ ul{
     font-size: 22px;
     font-weight: 400;
     color: var(--text-color-title);
-    padding: 8px;
+    padding: 6px;
 }
   
   .link:hover{
-  width: 180px;
   color: var(--text-color-title);
   border: 1px solid #525151;
-  border-radius: 16px;
+  border-radius: 14px;
   background-color: var(--bg-color-source-flower);
   }
