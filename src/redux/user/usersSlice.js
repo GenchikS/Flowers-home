@@ -41,11 +41,11 @@ const usersSlice = createSlice({
                 state.isLoading = true
             })
             .addCase(loginUser.fulfilled, (state, action) => {
-                (state.isLoading = false),
+              ((state.isLoading = false),
                 (state.error = null),
-                (state.item = action.payload);
+                (state.item = action.payload));
                 (state.role = action.payload.data.role);
-                (state.isLogin = true)
+                state.isLogin = true;
             })
             .addCase(loginUser.rejected, (state, action) => {
                 state.isLoading = false,
@@ -58,6 +58,7 @@ const usersSlice = createSlice({
                 ((state.isLoading = false),
                 (state.error = null),
                 (state.item = []));
+                state.role = "user";
                 state.isLogin = false;
             })
             .addCase(logoutUser.rejected, (state, action) => {

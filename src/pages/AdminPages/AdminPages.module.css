@@ -1,0 +1,34 @@
+ul{
+    margin: 0;
+    list-style-type: none;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    height: 800px;
+    padding: 32px 0;
+    background-color: var(--bg-color-fl-page);
+    align-items: center;
+}
+
+.list{
+    margin-bottom: 20px;
+}
+
+.link{
+    font-style:  italic;
+    letter-spacing: 1px;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--text-color-title);
+    padding: 8px;
+}
+  
+  .link:hover{
+  width: 180px;
+  color: var(--text-color-title);
+  border: 1px solid #525151;
+  border-radius: 16px;
+  background-color: var(--bg-color-source-flower);
+  }

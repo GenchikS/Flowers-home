@@ -16,6 +16,23 @@ ul{
     margin-bottom: 28px;
 }
 
+.admin{
+    font-style:  italic;
+    letter-spacing: 1px;
+    font-size: 16px;
+    color: var(--text-color-title);
+    margin-bottom: 28px;
+}
+
+  .admin:hover{
+  width: 180px;
+  color: var(--text-color-title);
+  border: 1px solid #525151;
+  border-radius: 16px;
+  background-color: var(--bg-color-card);
+  padding: 8px;
+  }
+
 .link{
     font-style:  italic;
     letter-spacing: 1px;

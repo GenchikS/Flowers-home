@@ -4,13 +4,15 @@ import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 import LoginPages from "./pages/LoginPage/LoginPages.jsx";
 import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
+import Chrysanthemums from "./component/Admin/Chrysanthemums/Chrysanthemums.jsx";
+import Daisies from "./component/Admin/Daisies/Daisies.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
 const SourceFlowersPage = lazy(() => import(`./pages/SourceFlowersPage/SourceFlowersPage.jsx`)
 );
 const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
-
+const AdminPages = lazy(() => import(`./pages/AdminPages/AdminPages`));
 
 
 // axios.defaults.baseURL = `https://flowers-home-bd.onrender.com`;
@@ -28,6 +30,12 @@ export default function App() {
               path="/flowers/chrysanthemums"
               element={<SourceFlowersPage titleSource="хризантеми" />}
             />
+            <Route path="/admin/flowers" element={<AdminPages />} />
+            <Route
+              path="/admin/flowers/chrysanthemums"
+              element={<Chrysanthemums />}
+            />
+            <Route path="/admin/flowers/daisies" element={<Daisies />} />
             <Route
               path="/flowers/daisies"
               element={<SourceFlowersPage titleSource="ромашки" />}
