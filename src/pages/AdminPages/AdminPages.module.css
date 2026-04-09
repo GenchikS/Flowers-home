@@ -19,10 +19,10 @@ ul{
 .link{
     font-style:  italic;
     letter-spacing: 1px;
-    font-size: 22px;
+    font-size: 16px;
     font-weight: 400;
     color: var(--text-color-title);
-    padding: 0 6px 0 6px;
+    padding: 0 10px 0 10px;
 }
   
   .link:hover{

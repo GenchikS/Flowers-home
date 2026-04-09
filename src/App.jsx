@@ -4,8 +4,9 @@ import Layout from "./component/Layout/Layout";
 import { lazy, Suspense } from "react";
 import LoginPages from "./pages/LoginPage/LoginPages.jsx";
 import RegisterPages from "./pages/RegisterPage/RegisterPages.jsx";
-import Chrysanthemums from "./component/Admin/Chrysanthemums/Chrysanthemums.jsx";
 import Daisies from "./component/Admin/Daisies/Daisies.jsx";
+import Chrysanthemums from "./component/Admin/Chrysanthemums/Chrysanthemums.jsx";
+import AddChrysanthemums from "./component/Admin/Chrysanthemums/AddFlowers/AddChrysanthemums.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -31,6 +32,10 @@ export default function App() {
             <Route
               path="/admin/flowers/chrysanthemums"
               element={<Chrysanthemums />}
+            />
+            <Route
+              path="/admin/flowers/chrysanthemums/add"
+              element={<AddChrysanthemums />}
             />
             <Route path="/admin/flowers/daisies" element={<Daisies />} />
             <Route
