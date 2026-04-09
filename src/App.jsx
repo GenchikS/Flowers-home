@@ -9,14 +9,11 @@ import Daisies from "./component/Admin/Daisies/Daisies.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
-const SourceFlowersPage = lazy(() => import(`./pages/SourceFlowersPage/SourceFlowersPage.jsx`)
-);
+const SourceFlowersPage = lazy(() => import(`./pages/SourceFlowersPage/SourceFlowersPage.jsx`));
 const ContactsPages = lazy(() => import(`./pages/ContactsPages/ContactsPages`));
 const AdminPages = lazy(() => import(`./pages/AdminPages/AdminPages`));
 
-
 // axios.defaults.baseURL = `https://flowers-home-bd.onrender.com`;
-
 
 export default function App() {
   return (

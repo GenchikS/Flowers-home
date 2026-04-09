@@ -8,10 +8,13 @@ export default function Chrysanthemums() {
     const [flowerBlossom, setFlowerBlossom] = useState("вересень");
     const [flowerAvailability, setFlowerAvailability] = useState("так");
     const [flowerPrice, setFlowerPrice] = useState("50");
+    const [downloadFlower, setDownloadFlower] = useState([]);
 
 
 
-    const handleClick = () => {
+    const handleChange = (evt) => {
+        const flowersCode = evt.target.value;
+        // console.log("flowersCode", flowersCode)
         const downloadFlower = {
           flower: flower,
           size: flowerSize,
@@ -19,10 +22,15 @@ export default function Chrysanthemums() {
           color: flowerColor,
           price: flowerPrice,
           availability: flowerAvailability,
-          //   code: 54,
+          code: flowersCode,
         };
+    setDownloadFlower(downloadFlower);    
+    }
+
+    const handleClick = () => {
         console.log(downloadFlower);
-}
+    }
+    
     return (
       <div className={css.containerAll}>
         <div className={css.container}>
@@ -107,10 +115,15 @@ export default function Chrysanthemums() {
             type="text"
             placeholder="вкажіть порядковий код ідентифікатор"
             className={css.inputText}
+            onChange={handleChange}
           />
           <button type="button" onClick={handleClick}>
             Завантажити
           </button>
+
+          {/* <button type="button" onClick={handleClick}>
+            Завантажити
+          </button> */}
         </div>
       </div>
     );

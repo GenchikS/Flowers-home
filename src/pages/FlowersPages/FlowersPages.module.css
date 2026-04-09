@@ -39,7 +39,7 @@ ul{
     font-size: 26px;
     font-weight: 400;
     color: var(--text-color-title);
-    padding: 6px;
+    padding: 0 6px 0 6px;
 }
   
   .link:hover{
