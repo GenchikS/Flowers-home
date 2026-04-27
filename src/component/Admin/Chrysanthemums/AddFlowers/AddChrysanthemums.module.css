@@ -47,3 +47,8 @@
     font-size: 8px;
     color: red;
 }
+
+input:required:invalid ~ button.button {
+  opacity: .65;
+  pointer-events: none;
+}
