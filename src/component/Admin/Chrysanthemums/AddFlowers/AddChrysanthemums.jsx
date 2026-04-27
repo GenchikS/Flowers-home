@@ -1,16 +1,23 @@
+import { useDispatch, useSelector } from "react-redux";
+import { fetchAddFlowers } from "../../../../redux/flowers/operations.js";
 import css from "./AddChrysanthemums.module.css"
 import { useState } from "react";
+import { NavLink } from "react-router-dom";
+import { selectIsCode } from "../../../../redux/flowers/flowersSlice.js";
 
 export default function AddChrysanthemums() {
+   const dispatch = useDispatch();
     const [flower, setFlower] = useState("Хризантема");
     const [flowerSize, setFlowerSize] = useState("");
     const [flowerColor, setFlowerColor] = useState("");
     const [flowerBlossom, setFlowerBlossom] = useState("");
     const [flowerAvailability, setFlowerAvailability] = useState("");
     const [flowerPrice, setFlowerPrice] = useState("");
-  const [downloadFlower, setDownloadFlower] = useState([]);
-  const [input, setInput] = useState("")
+    const [downloadFlower, setDownloadFlower] = useState([]);
+    const [input, setInput] = useState("")
+    const [isCode, setIsCode] = useState("")
     
+  const codeAdd = useSelector(selectIsCode);
   
     const handleChange = (evt) => {
       const flowersCode = evt.target.value;
@@ -35,22 +42,24 @@ export default function AddChrysanthemums() {
     }
 
   const handleClick = () => {
-    // console.log(downloadFlower);
-    
+    console.log(downloadFlower);
+    // const data = fetchAddFlowers(downloadFlower);
+    // console.log(data);
+    dispatch(fetchAddFlowers(downloadFlower));
     setFlowerSize("");
     setFlowerColor("");
     setFlowerBlossom("");
     setFlowerAvailability("");
     setInput("")
-    
   }
-    
-    return (
-      <div className={css.containerAll}>
-        <div className={css.container}>
-          <div className={css.title}>
-            <p>Квітка: {flower}</p>
-          </div>
+
+  return (
+    <div className={css.containerAll}>
+      <div className={css.container}>
+        <div className={css.title}>
+          <p>Квітка: {flower}</p>
+        </div>
+        {!codeAdd && (
           <div className={css.containerSelect}>
             <label className={css.label}>
               Оберіть розмір квітки:
@@ -137,7 +146,9 @@ export default function AddChrysanthemums() {
               </label>
             )}
           </div>
+        )}
 
+        {!codeAdd && (
           <input
             type="text"
             value={input}
@@ -146,10 +157,25 @@ export default function AddChrysanthemums() {
             onChange={handleChange}
             required
           />
+        )}
+        {!codeAdd && (
           <button className={css.button} type="button" onClick={handleClick}>
             Завантажити
           </button>
-        </div>
+        )}
+        {!codeAdd && (
+          <div className={css.naviExitContainer}>
+            <NavLink to="/admin/flowers" className={css.naviExit}>
+              Закрити
+            </NavLink>
+          </div>
+        )}
+        {codeAdd && (
+          <div>
+            <p>Код: {codeAdd}</p>
+          </div>
+        )}
       </div>
-    );
+    </div>
+  );
 }

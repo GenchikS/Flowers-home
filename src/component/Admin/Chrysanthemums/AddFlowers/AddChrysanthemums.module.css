@@ -6,7 +6,7 @@
 
 .container{
     width: 200px;
-    height: 216px;
+    height: 236px;
     padding: 12px;
     margin: 0 auto;
     border-radius: 12px;
@@ -48,7 +48,38 @@
     color: red;
 }
 
+.button{
+    padding: 4px;
+    font-size: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: var(--text-price-true);
+}
+
 input:required:invalid ~ button.button {
   opacity: .65;
   pointer-events: none;
+}
+
+.naviExitContainer{
+    margin-top: 8px;
+}
+
+
+.naviExit{
+    width: 70px;
+    color: black;
+    padding: 4px;
+    font-size: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.naviExit:hover{
+    background-color: var(--text-price-false);
 }
