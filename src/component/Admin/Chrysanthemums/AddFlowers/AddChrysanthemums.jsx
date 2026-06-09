@@ -173,6 +173,12 @@ export default function AddChrysanthemums() {
         {codeAdd && (
           <div>
             <p>Код: {codeAdd}</p>
+            <NavLink
+              to="/admin/flowers/chrysanthemums/photo"
+              className={css.naviExit}
+            >
+              Додати фото
+            </NavLink>
           </div>
         )}
       </div>

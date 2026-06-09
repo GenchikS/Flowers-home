@@ -36,7 +36,7 @@ export const fetchAddFlowers = createAsyncThunk(
         `/admin/flowers/chrysanthemums/add/`,
         payload,
       );
-      // console.log("add respons", respons.data);
+      console.log("add respons", respons.data);
       return respons.data;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
