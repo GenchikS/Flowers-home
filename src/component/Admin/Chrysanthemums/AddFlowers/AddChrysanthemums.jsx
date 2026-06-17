@@ -2,8 +2,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchAddFlowers } from "../../../../redux/flowers/operations.js";
 import css from "./AddChrysanthemums.module.css"
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
-import { selectIsCode } from "../../../../redux/flowers/flowersSlice.js";
+import { Navigate, NavLink } from "react-router-dom";
+import { selectId, selectIsCode } from "../../../../redux/flowers/flowersSlice.js";
 
 export default function AddChrysanthemums() {
    const dispatch = useDispatch();
@@ -15,11 +15,10 @@ export default function AddChrysanthemums() {
     const [flowerPrice, setFlowerPrice] = useState("");
     const [downloadFlower, setDownloadFlower] = useState([]);
     const [input, setInput] = useState("")
-    const [isCode, setIsCode] = useState("")
-    
-  const codeAdd = useSelector(selectIsCode);
+       
+    const codeAdd = useSelector(selectIsCode);
   
-    const handleChange = (evt) => {
+const handleChange = (evt) => {
       const flowersCode = evt.target.value;
       // console.log("flowersCode", typeof (flowersCode))
       const codeNumber = Number.parseInt(flowersCode);
@@ -53,7 +52,7 @@ export default function AddChrysanthemums() {
     setInput("")
   }
 
-  return (
+return (
     <div className={css.containerAll}>
       <div className={css.container}>
         <div className={css.title}>

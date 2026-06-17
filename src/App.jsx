@@ -8,6 +8,8 @@ import Daisies from "./component/Admin/Daisies/Daisies.jsx";
 import Chrysanthemums from "./component/Admin/Chrysanthemums/Chrysanthemums.jsx";
 import AddChrysanthemums from "./component/Admin/Chrysanthemums/AddFlowers/AddChrysanthemums.jsx";
 import AddChrysanthemumsPhoto from "./component/Admin/Chrysanthemums/AddFlowers/AddChrysanthemumsPhoto/AddChrysanthemumsPhoto.jsx";
+import { useSelector } from "react-redux";
+import { selectId } from "./redux/flowers/flowersSlice.js";
 // import AddChrysanthemumsPhoto from "./component/Admin/Chrysanthemums/AddFlowers/AddChrysanthemumsPhoto/AddChrysanthemumsPhoto.jsx";
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
@@ -19,6 +21,8 @@ const AdminPages = lazy(() => import(`./pages/AdminPages/AdminPages`));
 // axios.defaults.baseURL = `https://flowers-home-bd.onrender.com`;
 
 export default function App() {
+  // const id = useSelector(selectId);
+  // const idPhoto = `/admin/flowers/chrysanthemums/photo/${id}`
   return (
     <div className={css.container}>
       <Layout>
