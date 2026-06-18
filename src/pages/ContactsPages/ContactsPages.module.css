@@ -7,10 +7,17 @@ h1, p{
     flex-direction: column;
     min-width: 320px;
     height: 800px;
-    background-color: var(--bg-color);
     padding-top: 46px;
     /* justify-content: center; */
     align-items: center;
+    background-color: var(--bg-color);
+    /* background: linear-gradient(
+      rgba(79, 181, 237, 0.172),
+      rgba(20, 45, 18, 0.751)
+    ), url("/src/img/backgr_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; */
 }
 
 .title{
@@ -89,6 +96,7 @@ h1, p{
     background-size: cover;
     background-image: url("../../img/tel.png");
     margin-right: 4px;
+    border-radius: 6px;
 }
 
 .photoTelegram{
@@ -107,7 +115,8 @@ h1, p{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-     background-image: url("../../img/viber.png");
+    background-image: url("../../img/viber.png");
+    border-radius: 6px;
 }
 
 .textNp{

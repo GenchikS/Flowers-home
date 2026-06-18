@@ -15,7 +15,7 @@ export default function FlowersPages() {
           <p className={css.textTel}>+38 (098) 997 94 64</p>
         </li>
       </ul>
-      <p className={css.textNp}>Відправляємо: Новою Поштою</p>
+      <p className={css.textNp}>Відправка: Нова Пошта</p>
       {/* </div> */}
     </div>
   );

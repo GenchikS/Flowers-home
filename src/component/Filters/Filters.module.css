@@ -1,8 +1,7 @@
 .container{
     display: flex;
     flex-direction: column;
-    border-bottom: 2px solid #6d9cd2;
-    background-color: rgba(190, 190, 245, 0.6);
+    /* border-bottom: 2px solid #6d9cd2; */
     padding: 8px 0;
     align-items: center;
 }

@@ -14,13 +14,18 @@
   
   height: 100%;
 } */
+ 
  :root{
   font-family: "Roboto", sans-serif;
   font-style: normal;
 
-  --bg-color: rgba(229, 235, 235, 0.6);
-  --bg-color-fl-page: rgba(190, 190, 245, 0.6);
+  /* --bg-color: rgba(229, 235, 235, 0.6); */
+  --bg-color-home: rgba(229, 235, 235, 0.6);
+  --bg-color: #3c0c166e;
+
   --bg-color-card: rgba(229, 235, 235, 0.6);
+  /* --bg-color-card: #3c0c1699; */
+
   --bg-color-layout: #09981ccb;
   --bg-color-source-flower: #66d675;
   --bg-color-white: rgba(255, 255, 255, 0.8);
