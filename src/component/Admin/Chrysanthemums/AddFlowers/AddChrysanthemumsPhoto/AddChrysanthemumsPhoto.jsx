@@ -89,7 +89,7 @@ export default function AddChrysanthemumsPhoto() {
                     //  className={styles.fileInput}
                     onChange={handleFileChangeWeb}
                   />
-                </div>,
+                </div>
               )}
           </div>
         )}
