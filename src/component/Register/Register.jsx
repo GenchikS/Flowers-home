@@ -45,7 +45,7 @@ export default function Register() {
         <Form className={css.containerForm}>
           <div className={css.containerInput}>
             <label htmlFor={nameRegisterFieldId} className={css.labelForm}>
-              name
+              name:
             </label>
             <Field
               name="name"
@@ -56,7 +56,7 @@ export default function Register() {
           </div>
           <div className={css.containerInput}>
             <label htmlFor={emaiRegisterFieldId} className={css.labelForm}>
-              email
+              email:
             </label>
             <Field
               name="email"
@@ -67,7 +67,7 @@ export default function Register() {
           </div>
           <div className={css.containerInput}>
             <label htmlFor={passwordRegisterFieldId} className={css.labelForm}>
-              password
+              password:
             </label>
             <Field
               name="password"

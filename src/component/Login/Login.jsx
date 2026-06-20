@@ -47,7 +47,7 @@ return (
         </div>
         <div className={css.containerInput}>
           <label htmlFor={passwordFieldId} className={css.labelForm}>
-            password
+            password:
           </label>
           <Field
             name="password"
