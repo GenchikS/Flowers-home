@@ -1,7 +1,7 @@
 import css from "./ButtonListTwo.module.css"
 
 export default function ButtonListTwo({ children, onClick, btnColor = null }) {
-  console.log(btnColor);
+  // console.log(btnColor);
   let btn;
   if (btnColor == "btnGr") {
     btn = css["btnGr"]

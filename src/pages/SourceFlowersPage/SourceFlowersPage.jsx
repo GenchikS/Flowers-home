@@ -74,7 +74,7 @@ export default function SourceFlowersPage({ titleSource }) {
                 </li>
               ))
           ) : (
-            <p className={css.nowArray}>По запиту нічого не знайдено </p>
+            <p className={css.nowArray}>По вашому запиту нічого не знайдено!</p>
           )}
         </ul>
 

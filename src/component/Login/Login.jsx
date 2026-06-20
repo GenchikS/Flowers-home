@@ -30,34 +30,38 @@ export default function Login() {
   }
 
 return (
-      <div>
-        <h5 className={css.titleLogin}>Login form </h5>
-        <Formik initialValues={initialValues} onSubmit={handleSubmit}>
-          <Form className={css.containerForm}>
-            <label htmlFor={emaiFieldId} className={css.labelEmail}>
-              email
-            </label>
-            <Field
-              name="email"
-              type="text"
-              className={css.email}
-              id={emaiFieldId}
-            />
-            <label htmlFor={passwordFieldId} className={css.labelPassword}>
-              password
-            </label>
-            <Field
-              name="password"
-              type="text"
-              className={css.userName}
-              id={passwordFieldId}
-            />
-            <a className={css.forgottenPassword}>Forget password?</a>
-            <button type="submit" className={css.button}>
-              Submit
-            </button>
-          </Form>
-        </Formik>
-      </div>
-    );
+  <div>
+    <h5 className={css.titleLogin}>Login form </h5>
+    <Formik initialValues={initialValues} onSubmit={handleSubmit}>
+      <Form className={css.containerForm}>
+        <div className={css.containerInput}>
+          <label htmlFor={emaiFieldId} className={css.labelForm}>
+            email:
+          </label>
+          <Field
+            name="email"
+            type="text"
+            className={css.email}
+            id={emaiFieldId}
+          />
+        </div>
+        <div className={css.containerInput}>
+          <label htmlFor={passwordFieldId} className={css.labelForm}>
+            password
+          </label>
+          <Field
+            name="password"
+            type="text"
+            className={css.userName}
+            id={passwordFieldId}
+          />
+        </div>
+        <a className={css.forgettenPassword}>Forget password?</a>
+        <button type="submit" className={css.button}>
+          Submit
+        </button>
+      </Form>
+    </Formik>
+  </div>
+);
 }

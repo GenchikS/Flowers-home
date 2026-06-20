@@ -1,62 +1,77 @@
 .titleLogin{
+    font-family: "Roboto", sans-serif;
     font-size: 18px;
-    color:var(--text-color-text-transperent)
+    color: var(--text-color-text);
 }
 
 .containerForm{
     width: 100%;
     display: flex;
     flex-direction: column;
-    margin-top: 24px;
 }
 
-.labelEmail, .labelPassword{
-    font-size: 12px;
-    color: var(--text-color-text-transperent);
-    margin-left: 10px;
+.containerInput {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  position: static;
+  max-width: 240px;
 }
 
-.userName, .email{
-    font-size: 18px;
-    font-weight: 400;
-    padding: 4px 12px;
-    margin-bottom: 8px;
-    border: 2px solid var(--border-color-black);
-    border-radius: 20px;
-    background-color: rgba(0, 0, 255, 0.1);;
-    outline: none;
+.containerInput label.labelForm {
+  font-size: 8px;
+  letter-spacing: 0.75px;;
+  color: #03129b;
+  font-weight: 400;
+  position: relative;
+  top: 1.0rem;
+  margin: 0 0 0 7px;
+  width: fit-content;
 }
 
-.userName:hover, .email:hover{
-    background-color: rgba(0, 0, 255, 0.3);
+.containerInput input[type=text].email, input[type=text].userName {
+  /* height: px; */
+  padding: 12px 10px 4px 10px;
+  font-size: 10px;
+  border: 2px #818CF8 solid;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.631);
+  /* cursor: pointer; */
 }
 
-.userName:focus, .email:focus{
-    background-color: white;
+.containerInput input[type=text].email:hover, input[type=text].userName:hover {
+  outline: none;
+  background: rgba(120, 249, 100, 0.631);
 }
 
-.forgottenPassword{
-    font-size: 12px;
+.containerInput input[type=text].email:focus, input[type=text].userName:focus {
+  outline: none;
+}
+
+.forgettenPassword{
+    font-size: 8px;
     color: rgba(0, 0, 255, 0.9);
-    margin-left: 12px;
     cursor: pointer;
+    margin-top: 2px;
 }
 
 .button{
-    width: 80px;
-    height: 32px;
-    font-size: 14px;
-    padding: 4px;
-    border: 2px solid var(--border-color-black);
-    border-radius: 20px;
+    width: 64px;
+    height: 24px;
+    color: var(--text-color-white);
+    font-size: 10px;
+    letter-spacing: 0.75px;
+    border: 2px var( --border-color);
+    border-radius: 8px;
     cursor: pointer;
-    background-color: rgba(0, 0, 255, 0.1);
+    background-color: rgba(0, 0, 255, 0.65);;
     margin: 0 auto;
     margin-top: 20px;
 }
 
 .button:hover{
-    background-color: rgba(0, 0, 255, 0.3);
+    background-color: var(--button-background-true-hover);
+    border: 2px var( --border-color-black);
 }
 
 @media screen and (min-width: 768px) {

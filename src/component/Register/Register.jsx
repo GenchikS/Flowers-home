@@ -43,36 +43,39 @@ export default function Register() {
       <h5 className={css.titleRegister}>Register form</h5>
       <Formik initialValues={initialValues} onSubmit={handleSubmit}>
         <Form className={css.containerForm}>
-          <label htmlFor={nameRegisterFieldId} className={css.labelName}>
-            name
-          </label>
-          <Field
-            name="name"
-            type="text"
-            className={css.userName}
-            id={nameRegisterFieldId}
-          />
-          <label htmlFor={emaiRegisterFieldId} className={css.labelEmail}>
-            email
-          </label>
-          <Field
-            name="email"
-            type="text"
-            className={css.email}
-            id={emaiRegisterFieldId}
-          />
-          <label
-            htmlFor={passwordRegisterFieldId}
-            className={css.labelPassword}
-          >
-            password
-          </label>
-          <Field
-            name="password"
-            type="text"
-            className={css.userPassword}
-            id={passwordRegisterFieldId}
-          />
+          <div className={css.containerInput}>
+            <label htmlFor={nameRegisterFieldId} className={css.labelForm}>
+              name
+            </label>
+            <Field
+              name="name"
+              type="text"
+              className={css.userName}
+              id={nameRegisterFieldId}
+            />
+          </div>
+          <div className={css.containerInput}>
+            <label htmlFor={emaiRegisterFieldId} className={css.labelForm}>
+              email
+            </label>
+            <Field
+              name="email"
+              type="text"
+              className={css.email}
+              id={emaiRegisterFieldId}
+            />
+          </div>
+          <div className={css.containerInput}>
+            <label htmlFor={passwordRegisterFieldId} className={css.labelForm}>
+              password
+            </label>
+            <Field
+              name="password"
+              type="text"
+              className={css.userPassword}
+              id={passwordRegisterFieldId}
+            />
+          </div>
           <button type="submit" className={css.button}>
             Submit
           </button>

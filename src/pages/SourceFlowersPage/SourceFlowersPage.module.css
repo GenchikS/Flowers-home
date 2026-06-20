@@ -1,4 +1,6 @@
 .containerFlowersPage{
+    min-height: 800px;
+    padding: 22px 0;
     display: flex;
     flex-direction: column;
        background: linear-gradient(
@@ -25,8 +27,8 @@
 }
 
 .nowArray{
-    font-size: 18px;
-    font-weight: 500;
+    font-size: 14px;
+    font-weight: 300;
     color: var(--text-price-false);
 }
 

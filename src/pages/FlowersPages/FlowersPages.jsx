@@ -7,7 +7,7 @@ export default function FlowersPages() {
   const navigate = useNavigate();
 
   const handleOnClick = (evn) => {
-    console.log(evn)
+    // console.log(evn)
     switch (evn) {
       case "Хризантеми":
         navigate("/flowers/chrysanthemums");
