@@ -1,33 +1,41 @@
-import { NavLink } from "react-router-dom";
-import clsx from "clsx";
+import { useNavigate } from "react-router-dom";
 import css from "./Chrysanthemums.module.css";
+import ButtonListTwo from "../../ButtonList/ButtonListTwo/ButtonListTwo.jsx";
 
 export default function Chrysanthemums() {
-        const navi = (props) => {
-          return clsx(css.link, props.isActive && css.active);
-      };
+  const navigate = useNavigate();
+
+  const handleOnClick = (evn) => {
+    console.log(evn);
+    switch (evn) {
+      case "Додати":
+        navigate("/admin/flowers/chrysanthemums/add");
+        break;
+      case "Змінити":
+        navigate("/admin/flowers/flowers/chrysanthemums/update");
+        break;
+      case "Видалити":
+        navigate("/admin/flowers/flowers/chrysanthemums/delete");
+        break;
+      default:
+        navigate("/flowers");
+    }
+  };
+
   return (
     <ul className={css.containerAll}>
       <li className={css.list}>
-        <NavLink to="/admin/flowers/chrysanthemums/add" className={navi}>
+        <ButtonListTwo onClick={handleOnClick} btnColor="btnGr">
           Додати
-        </NavLink>
+        </ButtonListTwo>
       </li>
       <li className={css.list}>
-        <NavLink
-          to="/admin/flowers/flowers/chrysanthemums/update"
-          className={navi}
-        >
-          Змінити
-        </NavLink>
+        <ButtonListTwo onClick={handleOnClick}>Змінити</ButtonListTwo>
       </li>
       <li className={css.list}>
-        <NavLink
-          to="/admin/flowers/flowers/chrysanthemums/delete"
-          className={navi}
-        >
+        <ButtonListTwo onClick={handleOnClick} btnColor="btnRd">
           Видалити
-        </NavLink>
+        </ButtonListTwo>
       </li>
     </ul>
   );

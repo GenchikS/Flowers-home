@@ -5,13 +5,14 @@ const initialState = {
   flowers: {
     items: [],
     isLoading: false,
+    isLoadingPhoto: false,
     error: null,
     modalPhoto: false,
     page: 1,
     isCode: "",
     photo: null,
     photoWeb: null,
-  }
+  },
 };
 
 // export const selectPages = (state) => state.flowers.page;
@@ -23,6 +24,7 @@ export const selectIsCode = (state) => state.flowers.isCode;
 export const selectId = (state) => state.flowers.id;
 export const selectIsUrlPhoto = (state) => state.flowers.photo;
 export const selectIsUrlWebPhoto = (state) => state.flowers.photoWeb;
+export const selectLoadingPhoto = (state) => state.flowers.isLoadingPhoto;
 
 
 const flowersSlice = createSlice({
@@ -37,7 +39,6 @@ const flowersSlice = createSlice({
         ((state.isLoading = false),
           (state.error = null),
           // (state.items = console.log(action.payload)),
-          // (state.page = action.payload.page + 1),
           (state.items = action.payload));
         state.modalPhoto = false;
       })
@@ -45,32 +46,40 @@ const flowersSlice = createSlice({
         ((state.isLoading = false), (state.error = action.payload));
       })
       .addCase(fetchAddFlowers.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingPhoto = true;
       })
       .addCase(fetchAddFlowers.fulfilled, (state, action) => {
         state.error = null;
         state.isCode = action.payload.data.code;
         state.id = action.payload.data._id;
+        state.isLoadingPhoto = false;
       })
       .addCase(fetchAddFlowers.rejected, (state, action) => {
-        ((state.isLoading = false), (state.error = action.payload));
+        ((state.isLoadingPhoto = false), (state.error = action.payload));
       })
       .addCase(fetchAddPhoto.pending, (state) => {
-        state.isLoading = true;
+        state.isLoadingPhoto = true;
       })
       .addCase(fetchAddPhoto.fulfilled, (state, action) => {
         state.error = null;
+        state.isLoadingPhoto = false;
         state.photo = action.payload.data.photo;
       })
+      .addCase(fetchAddPhoto.rejected, (state, action) => {
+        ((state.isLoadingPhoto = false), (state.error = action.payload));
+      })
       .addCase(fetchAddPhotoWeb.pending, (state, action) => {
-        ((state.isLoading = false), (state.error = action.payload));
+        ((state.isLoadingPhoto = true),
+        (state.error = action.payload))
       })
       .addCase(fetchAddPhotoWeb.fulfilled, (state, action) => {
         state.error = null;
-        state.photoWeb = action.payload.data.photoWeb;
+        ((state.isLoadingPhoto = false),
+        (state.photoWeb = action.payload.data.photoWeb));
       })
       .addCase(fetchAddPhotoWeb.rejected, (state, action) => {
-        ((state.isLoading = false), (state.error = action.payload));
+        ((state.isLoadingPhoto = false),
+        (state.error = action.payload));
       });
   }
 });

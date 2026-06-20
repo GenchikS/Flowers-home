@@ -1,35 +1,40 @@
 import css from "./FlowersPages.module.css";
-import { NavLink} from "react-router-dom";
-import clsx from "clsx";
-// import { useSelector } from "react-redux";
-// import { selectRole } from "../../redux/user/usersSlice.js";
-
+import { useNavigate} from "react-router-dom";
+import ButtonListTwo from "../../component/ButtonList/ButtonListTwo/ButtonListTwo.jsx";
 
 export default function FlowersPages() {
   // const userRole = useSelector(selectRole);
+  const navigate = useNavigate();
 
-    const navi = (props) => {
-      return clsx(css.link, props.isActive && css.active);
-  };
+  const handleOnClick = (evn) => {
+    console.log(evn)
+    switch (evn) {
+      case "Хризантеми":
+        navigate("/flowers/chrysanthemums");
+        break;
+      case "Ромашки":
+        navigate("/flowers/daisies");
+        break;
+      case "Редагувати":
+        navigate("/admin/flowers");
+        break;
+      default:
+        navigate("/flowers");
+    }
+  }
 
   return (
     <ul className={css.container}>
       {/* {userRole == "admin" && */}
-        <li className={css.list}>
-        <NavLink to="/admin/flowers" className={css.textCorrecte}>
-          Редагувати
-        </NavLink>
-        </li>
-        {/* } */}
       <li className={css.list}>
-        <NavLink to="/flowers/chrysanthemums" className={navi}>
-          Хризантеми
-        </NavLink>
+        <ButtonListTwo onClick={handleOnClick} btnColor = "btnYel">Редагувати</ButtonListTwo>
+      </li>
+      {/* } */}
+      <li className={css.list}>
+        <ButtonListTwo onClick={handleOnClick}>Хризантеми</ButtonListTwo>
       </li>
       <li className={css.list}>
-        <NavLink to="/flowers/daisies" className={navi}>
-          Ромашки
-        </NavLink>
+        <ButtonListTwo onClick={handleOnClick}>Ромашки</ButtonListTwo>
       </li>
     </ul>
   );

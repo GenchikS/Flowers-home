@@ -2,7 +2,7 @@ import css from "./Paginations.module.css"
 import { useSelector } from "react-redux";
 import { selectFlowers } from "../../redux/flowers/flowersSlice.js";
 import NumberListPageFlowers from "../NumberListPageFlowers/NumberListPageFlowers.jsx";
-import ButtonList from "../ButtonList/ButtonList.jsx";
+import ButtonList from "../ButtonList/ButtonListOne/ButtonList.jsx";
 
 export default function Paginations({ page, onUpdate }) {
     const flowers = useSelector(selectFlowers);

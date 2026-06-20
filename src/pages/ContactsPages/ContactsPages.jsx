@@ -16,7 +16,6 @@ export default function FlowersPages() {
         </li>
       </ul>
       <p className={css.textNp}>Відправка: Нова Пошта</p>
-      {/* </div> */}
     </div>
   );
 }

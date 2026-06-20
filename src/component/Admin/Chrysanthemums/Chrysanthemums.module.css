@@ -6,27 +6,19 @@
     align-items: center;
     padding: 32px 0;
     list-style-type: none;
+       background: linear-gradient(
+      rgba(79, 181, 237, 0.172),
+      rgba(20, 45, 18, 0.751)
+    ), url("/src/img/backgr_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
 }
 
 .list{
     margin-bottom: 20px;
 }
-
-.link{
-    font-style:  italic;
-    letter-spacing: 1px;
-    font-size: 16px;
-    font-weight: 400;
-    color: var(--text-color-title);
-    padding: 0 10px 0 10px;
-}
-  
-  .link:hover{
-  color: var(--text-color-title);
-  border: 1px solid #525151;
-  border-radius: 14px;
-  background-color: var(--bg-color-source-flower);
-  }
 
 
 

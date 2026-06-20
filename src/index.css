@@ -29,11 +29,18 @@
   --bg-color-layout: #09981ccb;
   --bg-color-source-flower: #66d675;
   --bg-color-white: rgba(255, 255, 255, 0.8);
+  --border-color: black;
+  --button-background-true:#2825b2;
+  --button-background-true-hover:#076313cf;
+  --button-background-false:rgb(216, 41, 41);
+   --button-background-false-hover:red;
   --text-color-title: black;
   --text-color-text: black;
   --text-color-text-transperent: rgba(0, 0, 0, 0.8);
   --text-color-title-flower: black;
   --text-color-text-flower: black;
+  --text-color-white:#dad7d7;
+  
   --text-price-true:#068617cf;
   --text-price-false: red;
   --border-color:#6d9cd2;
