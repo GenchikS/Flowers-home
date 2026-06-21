@@ -21,7 +21,7 @@ return (
           }}
           className={css.selectColor}
         >
-          <option value="всі">всі</option>
+          <option value="всі" className={css.option}>всі</option>
           <option value="білий">білий</option>
           <option value="оранжевий">оранжевий</option>
           <option value="фіолетовий">фіолетовий</option>
