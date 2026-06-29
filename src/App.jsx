@@ -8,6 +8,8 @@ import Daisies from "./component/Admin/Daisies/Daisies.jsx";
 import Chrysanthemums from "./component/Admin/Chrysanthemums/Chrysanthemums.jsx";
 import AddChrysanthemums from "./component/Admin/Chrysanthemums/AddFlowers/AddChrysanthemums.jsx";
 import AddChrysanthemumsPhoto from "./component/Admin/Chrysanthemums/AddFlowers/AddChrysanthemumsPhoto/AddChrysanthemumsPhoto.jsx";
+import DeleteFlower from "./component/Admin/Chrysanthemums/DeleteFlower/DeleteFlower.jsx";
+
 
 const HomePages = lazy(() => import(`./pages/HomePages/HomePages`));
 const FlowersPages = lazy(() => import(`./pages/FlowersPages/FlowersPages`));
@@ -41,6 +43,10 @@ export default function App() {
             <Route
               path="/admin/flowers/chrysanthemums/photo"
               element={<AddChrysanthemumsPhoto />}
+            />
+            <Route
+              path="/admin/flowers/chrysanthemums/delete"
+              element={<DeleteFlower />}
             />
             <Route path="/admin/flowers/daisies" element={<Daisies />} />
             <Route

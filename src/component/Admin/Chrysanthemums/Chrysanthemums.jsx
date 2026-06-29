@@ -15,7 +15,7 @@ export default function Chrysanthemums() {
         navigate("/admin/flowers/flowers/chrysanthemums/update");
         break;
       case "Видалити":
-        navigate("/admin/flowers/flowers/chrysanthemums/delete");
+        navigate("/admin/flowers/chrysanthemums/delete");
         break;
       default:
         navigate("/flowers");

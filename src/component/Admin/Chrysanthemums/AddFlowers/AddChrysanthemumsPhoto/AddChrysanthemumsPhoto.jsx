@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "./AddChrysanthemumsPhoto.module.css";
 import { useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import {
   selectId,
   selectIsCode,
@@ -97,9 +97,6 @@ export default function AddChrysanthemumsPhoto() {
             )}
             {isUrlPhoto && isUrlWebPhoto && (
               <div className={css.naviExitContainer}>
-                {/* <NavLink to="/admin/flowers" className={css.naviExit}>
-                  Закрити
-                </NavLink> */}
                 <button
                   type="button"
                   className={css.naviExit}

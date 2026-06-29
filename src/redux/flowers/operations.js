@@ -98,6 +98,22 @@ export const fetchAddPhotoWeb = createAsyncThunk(
 );
 
 
+export const fetchDeleteFlowers = createAsyncThunk(
+  "/admin/flowers/chrysanthemums/delete",
+  async (code, thunkAPI) => {
+    console.log("code", code);
+    try {
+      const response = await axios.delete(
+        `/admin/flowers/chrysanthemums/delete/?code=${code}`,
+      );
+      return response.data.payload;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error.message);
+    }
+  },
+);
+
+
 export const ressetIsCode = createAsyncThunk(
   "resset/isCode",
   async (payload, thunkAPI) => {

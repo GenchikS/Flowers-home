@@ -25,7 +25,6 @@ const handleChange = (evt) => {
       // console.log("flowersCode", typeof (flowersCode))
       const codeNumber = Number.parseInt(flowersCode);
 
-      // console.log("code", code);
       if (isNaN(codeNumber)) return
         
       const downloadFlower = {

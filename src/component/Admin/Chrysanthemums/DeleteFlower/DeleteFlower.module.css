@@ -1,0 +1,87 @@
+.containerAll{
+    height: 800px;
+    background-color: var(--bg-color-fl-page);
+            background: linear-gradient(
+      rgba(79, 181, 237, 0.172),
+      rgba(20, 45, 18, 0.751)
+    ), url("/src/img/backgr_2.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    align-items: center;
+    padding-top: 24px;
+}
+
+.container{
+    width: 200px;
+    height: 236px;
+    padding: 12px;
+    margin: 0 auto;
+    border-radius: 12px;
+    border: 2px solid var(--border-color);
+    background-color: rgba(229, 235, 235, 0.6);
+    box-shadow: 4px 4px 6px 2px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(91, 125, 94, 0.82);
+    background:
+    linear-gradient(rgba(231, 235, 248, 0.85), rgba(164, 146, 210, 0.699));
+    background-size: cover;
+}
+
+.containerTitle{
+    margin-bottom: 14px;
+}
+
+.titleSpan{
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: var(--text-color-text);
+}
+
+
+.code{
+    margin-bottom: 10px;
+}
+
+.downloadPhoto{
+    font-family: "Roboto", sans-serif;
+    font-size: 10px;
+    color: var(--text-color-text);
+}
+
+.fileInput {
+  display: none;
+  width: 60px;
+}
+
+.uploadBtn {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 12px;
+  background-color: var(--button-background-true);
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+.uploadBtn:hover{
+    background: var( --button-background-true-hover);
+}
+
+.naviExit{
+    color: var(--text-color-white);
+    padding: 4px;
+    font-size: 10px;
+    border-radius: 4px;
+    border: 2px solid rgba(91, 125, 94, 0.82);
+    cursor: pointer;
+    background-color: var(--button-background-false);
+}
+
+.naviExit:hover{
+    background-color: var(--button-background-false-hover);
+    border: 2px solid var(--button-background-true);
+    color: rgb(255, 255, 255);
+}
