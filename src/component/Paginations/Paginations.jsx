@@ -9,9 +9,13 @@ export default function Paginations({ page, onUpdate }) {
     // console.log("page3", page);
   return (
     <div className={css.listPagnations}>
-      {page > 1 && <ButtonList onUpdate={onUpdate} title={page-1} />}
+      {page > 1 && (
+        <ButtonList onUpdate={onUpdate} title={page - 1} name="<<" />
+      )}
       <NumberListPageFlowers />
-      {page < flowers.totalPages && <ButtonList onUpdate={onUpdate} title={page+1} />}
+      {page < flowers.totalPages && (
+        <ButtonList onUpdate={onUpdate} title={page + 1} name=">>" />
+      )}
     </div>
   );
 }
