@@ -9,19 +9,13 @@
   z-index: 9;
   justify-content: center;
   align-items: center;
-  
-  
-  
-  /* opacity: 0; */
-  /* pointer-events: none; */
-  /* transition: opacity 250ms ease-in-out; */
 }
 
 .image{
     display: block;
     object-fit: contain;
     margin: 0 auto;
-    width: 320px;
+    width: 280px;
     height: 100%;
     border: 3px solid #6d9cd2;
     border-radius: 8px;

@@ -63,7 +63,7 @@ export const fetchAddPhoto = createAsyncThunk(
           },
         },
       );
-      console.log("data", data);
+      // console.log("data", data);
       return data.data;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
@@ -89,8 +89,21 @@ export const fetchAddPhotoWeb = createAsyncThunk(
           },
         },
       );
-      console.log("dataWEB", data);
+      // console.log("dataWEB", data);
       return data.data;
+    } catch (error) {
+      thunkAPI.rejectWithValue(error.message);
+    }
+  },
+);
+
+
+export const ressetIsCode = createAsyncThunk(
+  "resset/isCode",
+  async (payload, thunkAPI) => {
+    try {
+      // console.log("payload", payload);
+      // return payload;
     } catch (error) {
       thunkAPI.rejectWithValue(error.message);
     }

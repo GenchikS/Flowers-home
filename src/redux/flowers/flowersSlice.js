@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { fetchAddFlowers, fetchAddPhoto, fetchAddPhotoWeb, fetchFlowers } from "./operations.js";
+import { fetchAddFlowers, fetchAddPhoto, fetchAddPhotoWeb, fetchFlowers, ressetIsCode } from "./operations.js";
 
 const initialState = {
   flowers: {
@@ -69,17 +69,31 @@ const flowersSlice = createSlice({
         ((state.isLoadingPhoto = false), (state.error = action.payload));
       })
       .addCase(fetchAddPhotoWeb.pending, (state, action) => {
-        ((state.isLoadingPhoto = true),
-        (state.error = action.payload))
+        ((state.isLoadingPhoto = true), (state.error = action.payload));
       })
       .addCase(fetchAddPhotoWeb.fulfilled, (state, action) => {
         state.error = null;
         ((state.isLoadingPhoto = false),
-        (state.photoWeb = action.payload.data.photoWeb));
+          (state.photoWeb = action.payload.data.photoWeb));
       })
       .addCase(fetchAddPhotoWeb.rejected, (state, action) => {
-        ((state.isLoadingPhoto = false),
-        (state.error = action.payload));
+        ((state.isLoadingPhoto = false), (state.error = action.payload));
+      })
+      .addCase(ressetIsCode.pending, (state, action) => {
+        (
+          // (state.isLoadingPhoto = true),
+          (state.error = action.payload));
+      })
+      .addCase(ressetIsCode.fulfilled, (state) => {
+        state.error = null;
+        (
+          (state.isCode = ''),
+          (state.photo = null),
+          (state.photoWeb = null));
+      })
+      .addCase(ressetIsCode.rejected, (state, action) => {
+        (
+          (state.error = action.payload));
       });
   }
 });

@@ -6,7 +6,7 @@ export default function Chrysanthemums() {
   const navigate = useNavigate();
 
   const handleOnClick = (evn) => {
-    console.log(evn);
+    // console.log(evn);
     switch (evn) {
       case "Додати":
         navigate("/admin/flowers/chrysanthemums/add");

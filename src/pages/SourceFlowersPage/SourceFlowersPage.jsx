@@ -81,7 +81,7 @@ export default function SourceFlowersPage({ titleSource }) {
         {flowersItems.length ? (
           <Paginations page={page} onUpdate={handleClick} />
         ) : (
-          <p></p>
+          <p>pagin</p>
         )}
       </div>
     </div>

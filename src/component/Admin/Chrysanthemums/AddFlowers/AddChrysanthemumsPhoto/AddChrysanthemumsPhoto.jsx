@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import css from "./AddChrysanthemumsPhoto.module.css";
 import { useState } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import {
   selectId,
   selectIsCode,
@@ -9,7 +9,7 @@ import {
   selectIsUrlWebPhoto,
   selectLoadingPhoto,
 } from "../../../../../redux/flowers/flowersSlice.js";
-import { fetchAddPhoto, fetchAddPhotoWeb } from "../../../../../redux/flowers/operations.js";
+import { fetchAddPhoto, fetchAddPhotoWeb, ressetIsCode } from "../../../../../redux/flowers/operations.js";
 import LoaderTwo from "../../../../LoaderTwo/LoaderTwo.jsx";
 
 export default function AddChrysanthemumsPhoto() {
@@ -23,6 +23,8 @@ export default function AddChrysanthemumsPhoto() {
   const isUrlWebPhoto = useSelector(selectIsUrlWebPhoto);
   const isLoadingPhoto = useSelector(selectLoadingPhoto);
 
+  const navigate = useNavigate();
+
     const handleFileChange = (event) => {
       const file = event.target.files[0];
         if (file && file.type.startsWith("image/")) {
@@ -33,7 +35,7 @@ export default function AddChrysanthemumsPhoto() {
       }
     };
 
-      const handleFileChangeWeb = (event) => {
+    const handleFileChangeWeb = (event) => {
         const file = event.target.files[0];
         if (file && file.type.startsWith("image/")) {
           const reader = new FileReader();
@@ -41,7 +43,12 @@ export default function AddChrysanthemumsPhoto() {
           reader.readAsDataURL(file);
           dispatch(fetchAddPhotoWeb({ file, id }))
         }
-      };
+  };
+  
+  const onClickExit = () => {
+    navigate("/admin/flowers");
+    dispatch(ressetIsCode());
+  }
   
   return (
     <div className={css.containerAll}>
@@ -90,9 +97,16 @@ export default function AddChrysanthemumsPhoto() {
             )}
             {isUrlPhoto && isUrlWebPhoto && (
               <div className={css.naviExitContainer}>
-                <NavLink to="/admin/flowers" className={css.naviExit}>
+                {/* <NavLink to="/admin/flowers" className={css.naviExit}>
                   Закрити
-                </NavLink>
+                </NavLink> */}
+                <button
+                  type="button"
+                  className={css.naviExit}
+                  onClick={onClickExit}
+                >
+                  Закрити
+                </button>
               </div>
             )}
           </div>

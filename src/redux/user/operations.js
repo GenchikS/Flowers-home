@@ -13,7 +13,7 @@ export const registerUser = createAsyncThunk(
       // setAuthHeader(responseAdd.data.token);
       return responseAdd.data;
     } catch (error) {
-      console.log("err", error);
+      // console.log("err", error);
       return thunkAPI.rejectWithValue(error.message);
     }
   },

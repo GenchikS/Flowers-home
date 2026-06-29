@@ -43,7 +43,7 @@ const handleChange = (evt) => {
     }
 
   const handleClick = () => {
-    console.log(downloadFlower);
+    // console.log(downloadFlower);
     // const data = fetchAddFlowers(downloadFlower);
     // console.log(data);
     dispatch(fetchAddFlowers(downloadFlower));
