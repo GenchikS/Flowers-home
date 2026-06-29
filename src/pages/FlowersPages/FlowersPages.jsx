@@ -1,6 +1,8 @@
 import css from "./FlowersPages.module.css";
 import { useNavigate} from "react-router-dom";
 import ButtonListTwo from "../../component/ButtonList/ButtonListTwo/ButtonListTwo.jsx";
+// import { useSelector } from "react-redux";
+// import { selectRole } from "../../redux/user/usersSlice.js";
 
 export default function FlowersPages() {
   // const userRole = useSelector(selectRole);
@@ -25,11 +27,11 @@ export default function FlowersPages() {
 
   return (
     <ul className={css.container}>
-      {/* {userRole == "admin" && */}
+      {/* {userRole == "admin" &&  */}
       <li className={css.list}>
         <ButtonListTwo onClick={handleOnClick} btnColor = "btnYel">Редагувати</ButtonListTwo>
       </li>
-      {/* } */}
+      {/* }  */}
       <li className={css.list}>
         <ButtonListTwo onClick={handleOnClick}>Хризантеми</ButtonListTwo>
       </li>

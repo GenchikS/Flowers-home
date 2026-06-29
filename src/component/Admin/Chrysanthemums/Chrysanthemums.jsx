@@ -29,9 +29,9 @@ export default function Chrysanthemums() {
           Додати
         </ButtonListTwo>
       </li>
-      <li className={css.list}>
+      {/* <li className={css.list}>
         <ButtonListTwo onClick={handleOnClick}>Змінити</ButtonListTwo>
-      </li>
+      </li> */}
       <li className={css.list}>
         <ButtonListTwo onClick={handleOnClick} btnColor="btnRd">
           Видалити
