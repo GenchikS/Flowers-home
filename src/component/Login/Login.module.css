@@ -75,11 +75,18 @@
 }
 
 @media screen and (min-width: 768px) {
-.containerAll{
-    width: 280px;
+.containerInput{
+    width: 320px;
 }
 
-.labelEmail, .labelPassword{
+.containerInput label.labelForm{
+    font-size: 12px;
+    top: 1.2rem;
+}
+
+
+.containerInput input[type=text].email, input[type=text].userName{
+    height: 24px;
     font-size: 14px;
 }
 
@@ -88,7 +95,7 @@
     margin-bottom: 14px;
 }
 
-.forgottenPassword{
+.forgettenPassword{
     font-size: 14px;
 }
 
@@ -101,11 +108,14 @@
 
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
+.titleLogin{
+    font-size: 24px;
+}
 
-.container{
+/* .container{
     padding: 20px 16px;
     border-bottom: none;
     border-right: 2px solid var(--border-color);
-}
+} */
 }

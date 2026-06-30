@@ -78,32 +78,18 @@ ul{
 
 
 @media screen and (min-width: 768px) {
-
-.containerFlowersPage{
-    flex-direction: column;
-}
-
-.containerTitle{
-gap: 16px;
-padding-top: 16px
-}
-}
-
-@media screen and (min-width: 1440px) {
-
-.containerFlowersPage{
+.container{
+    display: flex;
     flex-direction: row;
-    height: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: start;
+    gap: 12px;
+}
 }
 
-.containerTitle{
+@media screen and (min-width: 1280px) {
+.container{
 gap: 22px;
-padding-top: 22px
-}
-
-.containerCartPaginations{
-display: flex;
-flex-direction: column;
-width: 100%;
 }
 }
