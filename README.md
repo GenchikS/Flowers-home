@@ -1,8 +1,8 @@
 # 🌸 Flowers Shop
 
-## 📌 About
+<!-- ## 📌 About
 
-Описание проекта...
+Опис проєкту ... -->
 
 ## 🚀 Features
 
