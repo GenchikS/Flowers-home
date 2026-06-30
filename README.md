@@ -1,8 +1,41 @@
-# React + Vite
+# 🌸 Flowers Shop
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📌 About
 
-Currently, two official plugins are available:
+Описание проекта...
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Features
+
+- Авторизація користувача
+- Каталог квітів
+- Сортування
+- Пагінація
+- Адмін панель
+
+## 🛠 Technologies
+
+- React
+- Redux Toolkit
+- Node.js
+- Express
+- MongoDB
+- Cloudinary
+
+## 📷 Screenshots
+
+<p align="center">
+<img src="/screensots/login.jpg" width="150" height=""150>
+</p>
+<p align="center">
+<img src="/screensots/pagination.jpg" width="150" height=""150>
+</p>
+
+## ⚙ Installation
+
+npm install
+
+npm start
+
+## 👨‍💻 Author
+
+Gennadii
