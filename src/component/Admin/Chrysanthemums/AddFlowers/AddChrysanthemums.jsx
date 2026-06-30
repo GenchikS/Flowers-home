@@ -2,12 +2,13 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchAddFlowers } from "../../../../redux/flowers/operations.js";
 import css from "./AddChrysanthemums.module.css"
 import { useState } from "react";
-import { Navigate, NavLink } from "react-router-dom";
+import { Navigate, NavLink, useNavigate } from "react-router-dom";
 import { selectId, selectIsCode, selectLoadingPhoto } from "../../../../redux/flowers/flowersSlice.js";
 import LoaderTwo from "../../../LoaderTwo/LoaderTwo.jsx";
 
 export default function AddChrysanthemums() {
   const dispatch = useDispatch();
+   const navigate = useNavigate();
   const [flower, setFlower] = useState("Хризантема");
   const [flowerSize, setFlowerSize] = useState("");
   const [flowerColor, setFlowerColor] = useState("");
@@ -41,16 +42,19 @@ const handleChange = (evt) => {
       
     }
 
-  const handleClick = () => {
+  const handleClick = async() => {
     // console.log(downloadFlower);
     // const data = fetchAddFlowers(downloadFlower);
     // console.log(data);
-    dispatch(fetchAddFlowers(downloadFlower));
+    const dataCode = await dispatch(fetchAddFlowers(downloadFlower));
     setFlowerSize("");
     setFlowerColor("");
     setFlowerBlossom("");
     setFlowerAvailability("");
     setInput("")
+    if (dataCode) {
+      navigate("/admin/flowers/chrysanthemums/photo");
+    }
   }
 
 return (
@@ -170,17 +174,6 @@ return (
         <div className={css.naviExitContainer}>
           <NavLink to="/admin/flowers" className={css.naviExit}>
             Закрити
-          </NavLink>
-        </div>
-      )}
-      {codeAdd && (
-        <div>
-          <p className={css.code}>Код: {codeAdd}</p>
-          <NavLink
-            to="/admin/flowers/chrysanthemums/photo"
-            className={css.naviAddPhoto}
-          >
-            Додати фото
           </NavLink>
         </div>
       )}

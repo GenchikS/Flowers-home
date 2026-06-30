@@ -70,18 +70,23 @@
     background: var( --button-background-true-hover);
 }
 
+.textNaviExit{
+    color: var( --text-price-true);
+    margin-bottom: 8px;
+}
+
 .naviExit{
     color: var(--text-color-white);
     padding: 4px;
     font-size: 10px;
     border-radius: 4px;
-    border: 2px solid rgba(91, 125, 94, 0.82);
+    border: 1px solid rgba(91, 125, 94, 0.82);
     cursor: pointer;
-    background-color: var(--button-background-false);
+    background-color: var(--button-background-true-hover);
 }
 
 .naviExit:hover{
-    background-color: var(--button-background-false-hover);
-    border: 2px solid var(--button-background-true);
+    background-color: rgb(50, 192, 50);
+    border: 1px solid var(--button-background-true);
     color: rgb(255, 255, 255);
 }

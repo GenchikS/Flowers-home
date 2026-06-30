@@ -97,12 +97,13 @@ export default function AddChrysanthemumsPhoto() {
             )}
             {isUrlPhoto && isUrlWebPhoto && (
               <div className={css.naviExitContainer}>
+                <p className={css.textNaviExit }>Завантаження успішне!</p>
                 <button
                   type="button"
                   className={css.naviExit}
                   onClick={onClickExit}
                 >
-                  Закрити
+                  Вихід
                 </button>
               </div>
             )}
